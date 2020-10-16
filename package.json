@@ -2,6 +2,9 @@
   "name": "csid-team-website",
   "version": "0.1.0",
   "private": true,
+  "description": "CSID Team Website",
+  "main": "index.js",
+  "author": "Alberto Delgado & Rafael Lopez Martinez",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
