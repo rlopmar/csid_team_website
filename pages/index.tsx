@@ -1,18 +1,10 @@
-import Head from "next/head";
 import { ReactElement } from "react";
+import { Home } from "../src/containers";
 
-export default function Home(): ReactElement {
+export default function App(props): ReactElement {
   return (
     <div>
-      <Head>
-        <title>Create Next App</title>
-      </Head>
-
-      <main>
-        <h1>Welcome to CSID WEBSITE</h1>
-      </main>
-
-      <footer>Made with love &lt;3</footer>
+      <Home></Home>
     </div>
   );
 }
