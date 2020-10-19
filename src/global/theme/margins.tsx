@@ -1,5 +1,5 @@
 const margins = {
-  xxLargeScreen: {
+  desktopL: {
     l1: "200px",
     l2: "152px",
     l3: "88px",
@@ -7,7 +7,7 @@ const margins = {
     l5: "32px",
     l6: "12px",
   },
-  xLargeScreen: {
+  desktop: {
     l1: "152px",
     l2: "112px",
     l3: "64px",
@@ -15,7 +15,7 @@ const margins = {
     l5: "16px",
     l6: "6px",
   },
-  largeScreen: {
+  laptopL: {
     l1: "112px",
     l2: "80px",
     l3: "48px",
@@ -23,7 +23,7 @@ const margins = {
     l5: "12px",
     l6: "6px",
   },
-  mediumScreen: {
+  laptop: {
     l1: "96px",
     l2: "72px",
     l3: "48px",
@@ -31,7 +31,7 @@ const margins = {
     l5: "12px",
     l6: "6px",
   },
-  smallScreen: {
+  tablet: {
     l1: "72px",
     l2: "40px",
     l3: "40px",
@@ -39,7 +39,7 @@ const margins = {
     l5: "12px",
     l6: "6px",
   },
-  xSmallScreen: {
+  mobileL: {
     l1: "64px",
     l2: "40px",
     l3: "40px",
@@ -47,7 +47,7 @@ const margins = {
     l5: "12px",
     l6: "6px",
   },
-  xxSmallScreen: {
+  mobile: {
     l1: "52px",
     l2: "32px",
     l3: "32px",
