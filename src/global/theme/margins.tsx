@@ -1,0 +1,60 @@
+const margins = {
+  desktopL: {
+    l1: "200px",
+    l2: "152px",
+    l3: "88px",
+    l4: "48px",
+    l5: "32px",
+    l6: "12px",
+  },
+  desktop: {
+    l1: "152px",
+    l2: "112px",
+    l3: "64px",
+    l4: "32px",
+    l5: "16px",
+    l6: "6px",
+  },
+  laptopL: {
+    l1: "112px",
+    l2: "80px",
+    l3: "48px",
+    l4: "24px",
+    l5: "12px",
+    l6: "6px",
+  },
+  laptop: {
+    l1: "96px",
+    l2: "72px",
+    l3: "48px",
+    l4: "24px",
+    l5: "12px",
+    l6: "6px",
+  },
+  tablet: {
+    l1: "72px",
+    l2: "40px",
+    l3: "40px",
+    l4: "24px",
+    l5: "12px",
+    l6: "6px",
+  },
+  mobileL: {
+    l1: "64px",
+    l2: "40px",
+    l3: "40px",
+    l4: "24px",
+    l5: "12px",
+    l6: "6px",
+  },
+  mobile: {
+    l1: "52px",
+    l2: "32px",
+    l3: "32px",
+    l4: "16px",
+    l5: "10px",
+    l6: "6px",
+  },
+};
+
+export default margins;
