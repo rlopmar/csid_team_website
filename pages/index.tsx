@@ -1,10 +1,11 @@
 import { ReactElement } from "react";
-import { Home } from "../src/containers";
+import { DocumentHead, Hero } from "../src/containers";
 
 export default function App(props): ReactElement {
   return (
     <div>
-      <Home></Home>
+      <DocumentHead></DocumentHead>
+      <Hero></Hero>
     </div>
   );
 }

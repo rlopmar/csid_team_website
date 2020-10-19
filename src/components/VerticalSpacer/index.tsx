@@ -1,3 +1,3 @@
 import VerticalSpacer from "./VerticalSpacer";
 
-export { VerticalSpacer };
+export default VerticalSpacer;
