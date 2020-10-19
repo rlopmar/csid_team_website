@@ -1,0 +1,60 @@
+const margins = {
+  xxLargeScreen: {
+    l1: "200px",
+    l2: "152px",
+    l3: "88px",
+    l4: "48px",
+    l5: "32px",
+    l6: "12px",
+  },
+  xLargeScreen: {
+    l1: "152px",
+    l2: "112px",
+    l3: "64px",
+    l4: "32px",
+    l5: "16px",
+    l6: "6px",
+  },
+  largeScreen: {
+    l1: "112px",
+    l2: "80px",
+    l3: "48px",
+    l4: "24px",
+    l5: "12px",
+    l6: "6px",
+  },
+  mediumScreen: {
+    l1: "96px",
+    l2: "72px",
+    l3: "48px",
+    l4: "24px",
+    l5: "12px",
+    l6: "6px",
+  },
+  smallScreen: {
+    l1: "72px",
+    l2: "58px",
+    l3: "40px",
+    l4: "24px",
+    l5: "12px",
+    l6: "6px",
+  },
+  xSmallScreen: {
+    l1: "64px",
+    l2: "50px",
+    l3: "40px",
+    l4: "24px",
+    l5: "12px",
+    l6: "6px",
+  },
+  xxSmallScreen: {
+    l1: "52px",
+    l2: "40px",
+    l3: "32px",
+    l4: "16px",
+    l5: "10px",
+    l6: "6px",
+  },
+};
+
+export default margins;
