@@ -1,17 +1,20 @@
 import { ReactElement } from "react";
 import styled from "styled-components";
 
-const Title = styled.h1`
+const StyledTitle = styled.h1`
   font-size: ${(props) => (props.fontSize ? props.fontSize : "10px")};
   &:hover {
     color: red;
   }
 `;
 
-export default function Header(props): ReactElement {
+export default function Title(props: {
+  children?: React.ReactNode;
+  fontSize?: string;
+}): ReactElement {
   return (
     <div>
-      <Title {...props}>{props.children}</Title>
+      <StyledTitle {...props}>{props.children}</StyledTitle>
     </div>
   );
 }
