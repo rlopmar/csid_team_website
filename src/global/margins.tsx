@@ -33,7 +33,7 @@ const margins = {
   },
   smallScreen: {
     l1: "72px",
-    l2: "58px",
+    l2: "40px",
     l3: "40px",
     l4: "24px",
     l5: "12px",
@@ -41,7 +41,7 @@ const margins = {
   },
   xSmallScreen: {
     l1: "64px",
-    l2: "50px",
+    l2: "40px",
     l3: "40px",
     l4: "24px",
     l5: "12px",
@@ -49,7 +49,7 @@ const margins = {
   },
   xxSmallScreen: {
     l1: "52px",
-    l2: "40px",
+    l2: "32px",
     l3: "32px",
     l4: "16px",
     l5: "10px",
