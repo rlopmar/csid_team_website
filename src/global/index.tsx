@@ -1,5 +1,4 @@
-import colors from "./colors";
-import screenSizeBreakpoints from "./screenSizeBreakpoints";
-import margins from "./margins";
+import { colors, margins } from "./theme";
+import device from "./device";
 
-export { colors, screenSizeBreakpoints, margins };
+export { colors, margins, device };
