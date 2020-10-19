@@ -1,3 +1,4 @@
-import Home from "./Home";
+import Hero from "./Hero";
+import DocumentHead from "./DocumentHead";
 
-export { Home };
+export { DocumentHead, Hero };

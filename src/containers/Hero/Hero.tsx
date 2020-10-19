@@ -1,15 +1,12 @@
 import Head from "next/head";
 import { ReactElement } from "react";
-import { Title, VerticalSpacer } from "components";
+import { VerticalSpacer } from "components";
 
-export default function Home(props): ReactElement {
+export default function Hero(props): ReactElement {
   return (
     <div>
-      <Head>
-        <title>Create Next App</title>
-      </Head>
       <main>
-        <Title fontSize="120px">Hola Alberto</Title>
+        <h1>Hola Alberto</h1>
         <VerticalSpacer level="l1"></VerticalSpacer>
       </main>
 
