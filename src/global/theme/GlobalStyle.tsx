@@ -6,10 +6,16 @@ const fontFamilyPrimary = 'font-family: Khula;';
 const fontFamilySecondary = 'font-family: Montserrat;';
 
 // Font-Weights
-const fontWeightLight = 'font-weight: 300';
-const fontWeightMedium = 'font-weight: normal;';
-const fontWeightBold = 'font-weight: bold;';
-const fontWeightBolder = 'font-weight: bolder;';
+const fontWeight = (weight: number): string => {
+  return `font-weight: ${weight};`;
+};
+
+const fontWeightLight = fontWeight(300);
+const fontWeightNormal = fontWeight(400);
+const fontWeightMedium = fontWeight(500);
+const fontWeightSemiBold = fontWeight(600);
+const fontWeightBold = fontWeight(700);
+const fontWeightExtraBold = fontWeight(800);
 
 // Font-Size - currently only working with pixels
 const fontSize = (size: number): string => {
@@ -33,17 +39,17 @@ const GlobalStyle = createGlobalStyle`
   
   h1 {
     ${fontSize(72)}
-    ${fontWeightBolder}
+    ${fontWeightExtraBold}
   }
 
   h2 {
     ${fontSize(48)}
-    ${fontWeightBolder}
+    ${fontWeightExtraBold}
   }
   
   h3 {
     ${fontSize(48)}
-    ${fontWeightBolder}
+    ${fontWeightExtraBold}
   }
 
   h4 {
@@ -74,7 +80,7 @@ const GlobalStyle = createGlobalStyle`
 
   s2 {
     ${fontFamilySecondary}
-    ${fontWeightBold}
+    ${fontWeightSemiBold}
     ${fontSize(22)}
   }
 
