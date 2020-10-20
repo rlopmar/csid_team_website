@@ -1,7 +1,7 @@
 import { ReactElement, ReactNode } from "react";
 import styled from "styled-components";
 
-export default function link(props: {
+export default function Link(props: {
   href: string;
   target?: string;
   children?: ReactNode;
@@ -20,7 +20,7 @@ const StyledLink = styled.a`
     position: absolute;
     width: 100%;
     height: 2px;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     background-color: #000;
     visibility: hidden;
