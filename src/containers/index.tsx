@@ -1,4 +1,4 @@
 import Hero from "./Hero";
-import DocumentHead from "./DocumentHead";
+import PageBase from "./PageBase";
 
-export { DocumentHead, Hero };
+export { PageBase, Hero };
