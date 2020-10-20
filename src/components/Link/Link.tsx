@@ -6,11 +6,7 @@ export default function link(props: {
   target?: string;
   children?: ReactNode;
 }): ReactElement {
-  return (
-    <div>
-      <StyledLink {...props}>{props.children}</StyledLink>
-    </div>
-  );
+  return <StyledLink {...props}>{props.children}</StyledLink>;
 }
 
 const StyledLink = styled.a`
