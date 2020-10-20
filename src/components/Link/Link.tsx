@@ -1,7 +1,19 @@
 import { ReactElement, ReactNode } from "react";
 import styled from "styled-components";
 
-const Styledlink = styled.a`
+export default function link(props: {
+  href: string;
+  target?: string;
+  children?: ReactNode;
+}): ReactElement {
+  return (
+    <div>
+      <StyledLink {...props}>{props.children}</StyledLink>
+    </div>
+  );
+}
+
+const StyledLink = styled.a`
   text-decoration: none;
   color: inherit;
   cursor: pointer;
@@ -34,15 +46,3 @@ const Styledlink = styled.a`
     opacity: 0.8;
   }
 `;
-
-export default function link(props: {
-  href: string;
-  target?: string;
-  children?: ReactNode;
-}): ReactElement {
-  return (
-    <div>
-      <Styledlink {...props}>{props.children}</Styledlink>
-    </div>
-  );
-}
