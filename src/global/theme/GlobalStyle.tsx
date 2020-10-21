@@ -1,9 +1,9 @@
 // globalStyles.js
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 // Specify Primary and Secondary Font-Family
-const fontFamilyPrimary = 'font-family: Khula;';
-const fontFamilySecondary = 'font-family: Montserrat;';
+const fontFamilyPrimary = "font-family: Khula;";
+const fontFamilySecondary = "font-family: Montserrat;";
 
 // Font-Weights
 const fontWeight = (weight: number): string => {
@@ -27,6 +27,8 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     ${fontSize(20)}
+    ${fontFamilySecondary}
+    ${fontSize(16)}
   }
 
   h1, h2 {
