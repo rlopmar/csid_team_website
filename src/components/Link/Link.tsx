@@ -10,10 +10,12 @@ export default function Link(props: {
 }
 
 const StyledLink = styled.a`
+  display: inline-block;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
   position: relative;
+  margin-bottom: 2px;
 
   &::before {
     content: "";
