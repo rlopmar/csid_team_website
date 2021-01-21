@@ -1,4 +1,4 @@
-import Hero from "./Hero";
-import DocumentHead from "./DocumentHead";
+import Hero from './Hero';
+import Layout from './Layout';
 
-export { DocumentHead, Hero };
+export { Layout, Hero };

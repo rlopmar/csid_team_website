@@ -1,6 +1,17 @@
-import { ReactElement } from "react";
-import styled from "styled-components";
-import { device, margins } from "global";
+import { ReactElement } from 'react';
+import styled from 'styled-components';
+import { device, margins } from 'global';
+
+export default function VerticalSpacer(props: {
+  children?: React.ReactNode;
+  level: string;
+}): ReactElement {
+  return (
+    <div>
+      <StyledVerticalSpacer {...props}>{props.children}</StyledVerticalSpacer>
+    </div>
+  );
+}
 
 const StyledVerticalSpacer = styled.div`
   height: ${(props) => margins.mobile[props.level]};
@@ -28,14 +39,3 @@ const StyledVerticalSpacer = styled.div`
     height: ${(props) => margins.desktopL[props.level]};
   }
 `;
-
-export default function VerticalSpacer(props: {
-  children?: React.ReactNode;
-  level: string;
-}): ReactElement {
-  return (
-    <div>
-      <StyledVerticalSpacer {...props}>{props.children}</StyledVerticalSpacer>
-    </div>
-  );
-}

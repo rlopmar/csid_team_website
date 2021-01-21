@@ -1,3 +1,5 @@
-import VerticalSpacer from "./VerticalSpacer";
+import VerticalSpacer from './VerticalSpacer';
+import Link from './Link';
+import HeaderLink from './HeaderLink';
 
-export { VerticalSpacer };
+export { VerticalSpacer, Link, HeaderLink };

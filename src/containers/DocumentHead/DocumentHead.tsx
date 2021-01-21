@@ -1,5 +1,5 @@
-import Head from "next/head";
-import { ReactElement } from "react";
+import Head from 'next/head';
+import { ReactElement } from 'react';
 
 export default function DocumentHead(): ReactElement {
   return (

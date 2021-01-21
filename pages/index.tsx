@@ -1,11 +1,11 @@
-import { ReactElement } from "react";
-import { DocumentHead, Hero } from "../src/containers";
+import { Hero, Layout } from 'containers';
 
-export default function App(props): ReactElement {
+export default function App(): JSX.Element {
   return (
-    <div>
-      <DocumentHead></DocumentHead>
-      <Hero></Hero>
-    </div>
+    <>
+      <Layout>
+        <Hero></Hero>
+      </Layout>
+    </>
   );
 }
