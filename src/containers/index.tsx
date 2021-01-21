@@ -1,4 +1,4 @@
-import Hero from "./Hero";
-import PageBase from "./PageBase";
+import Hero from './Hero';
+import Layout from './Layout';
 
-export { PageBase, Hero };
+export { Layout, Hero };

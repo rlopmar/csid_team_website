@@ -1,12 +1,11 @@
-import { ReactElement } from 'react';
-import { Hero, PageBase } from 'containers';
+import { Hero, Layout } from 'containers';
 
-export default function App(props): ReactElement {
+export default function App(): JSX.Element {
   return (
     <>
-      <PageBase>
+      <Layout>
         <Hero></Hero>
-      </PageBase>
+      </Layout>
     </>
   );
 }
