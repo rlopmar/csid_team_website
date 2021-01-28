@@ -1,6 +1,8 @@
 // globalStyles.js
 import { createGlobalStyle } from 'styled-components';
 
+const backgroundColor = 'background-color: #F4F5F4;';
+
 // Specify Primary and Secondary Font-Family
 const fontFamilyPrimary = 'font-family: Khula;';
 const fontFamilySecondary = 'font-family: Montserrat;';
@@ -26,7 +28,10 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
+    ${backgroundColor}
     ${fontSize(20)}
+    ${fontFamilySecondary}
+    ${fontWeightNormal}
   }
 
   h1, h2 {
@@ -91,7 +96,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   p {
-    ${fontFamilyPrimary}
+    ${fontFamilySecondary}
     ${fontWeightMedium}
     ${fontSize(24)}
   }

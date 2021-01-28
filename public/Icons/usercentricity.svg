@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="89px" height="89px" viewBox="0 0 89 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icons/usercentricity</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.039216 0 0 0 0 0.431373 0 0 0 0 0.819608 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="icons/usercentricity" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.854445685">
+        <g filter="url(#filter-1)" id="icomoon-user-check">
+            <g>
+                <polygon id="Path" fill="#000000" fill-rule="nonzero" points="83.4375 52.84375 58.40625 77.875 50.0625 69.53125 44.5 75.09375 58.40625 89 89 58.40625"></polygon>
+                <path d="M38.9375,66.75 L66.75,66.75 L66.75,56.7434333 C60.90715,53.3362167 53.16415,50.997 44.5,50.28945 L44.5,45.7015 C50.62765,42.2483 55.625,33.6405167 55.625,25.03125 C55.625,11.2065833 55.625,0 38.9375,0 C22.25,0 22.25,11.2065833 22.25,25.03125 C22.25,33.6405167 27.24735,42.2497833 33.375,45.7015 L33.375,50.28945 C14.5055167,51.8321167 0,61.10295 0,72.3125 L38.9375,72.3125 L38.9375,66.75 L38.9375,66.75 Z" id="Path" fill="#000000" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>
