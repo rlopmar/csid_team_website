@@ -6,6 +6,7 @@ import FocusCardsCarousel from './FocusCarousel';
 
 const Wrapper = styled.div`
   text-align: center;
+  padding-bottom: 50px;
 `;
 
 const Container = styled.div`
@@ -16,7 +17,7 @@ const Container = styled.div`
   flex-wrap: wrap;
 
   @media${device.desktop} {
-    width: 1600px;
+    max-width: 1600px;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
@@ -37,14 +38,14 @@ const CardsWrapper = styled.div`
   }
 `;
 
-const H3 = styled.h3`
+const Title = styled.h2`
   margin-bottom: 30px;
 `;
 
 export default function About() {
   return (
-    <Wrapper>
-      <H3 style={{ color: colors.secondary.boulder }}>We focus on</H3>
+    <Wrapper id='focus'>
+      <Title style={{ color: colors.primary.doveGray }}>We focus on</Title>
 
       <CarouselWrapper>
         <FocusCardsCarousel />

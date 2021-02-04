@@ -7,31 +7,41 @@ const Container = styled.div`
 `;
 
 const Header = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: ${colors.primary.mineShaft};
-  padding: 50px;
+  padding: 20px 10vw 50px 10vw;
 `;
 
-const H1 = styled.h1`
+const Title = styled.h2`
   color: white;
-  font-size: 2rem;
   text-align: center;
+  margin-bottom: 10px;
+`;
+
+const MaxWidth = styled.div`
+  max-width: 800px;
 `;
 
 const P = styled.p`
   color: white;
-  font-size: 1.2rem;
+  text-align: center;
 `;
 
 export default function Tools() {
   return (
-    <Container>
+    <Container id='our work'>
       <Header>
-        <H1>Our tools</H1>
-        <P>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley
-        </P>
+        <Title>Our tools</Title>
+        <MaxWidth>
+          <P>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley
+          </P>
+        </MaxWidth>
       </Header>
       <Carousel />
     </Container>

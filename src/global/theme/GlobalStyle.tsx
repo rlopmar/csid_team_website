@@ -1,28 +1,36 @@
 // globalStyles.js
 import { createGlobalStyle } from 'styled-components';
+import {
+  fontSize,
+  fontFamilySecondary,
+  fontFamilyPrimary,
+  fontWeightLight,
+  fontWeightNormal,
+  fontWeightMedium,
+  fontWeightSemiBold,
+  fontWeightBold,
+  fontWeightExtraBold,
+} from './fonts';
+import {
+  media,
+  mobile,
+  mobileL,
+  tablet,
+  laptop,
+  laptopL,
+  desktop,
+  desktopL,
+} from './media';
+import { colors } from 'global';
+
+import {
+  fontColorGrayNurse,
+  fontColorDoveGray,
+  fontColorMineShaft,
+  fontColorGray,
+} from './colors';
 
 const backgroundColor = 'background-color: #F4F5F4;';
-
-// Specify Primary and Secondary Font-Family
-const fontFamilyPrimary = 'font-family: Khula;';
-const fontFamilySecondary = 'font-family: Montserrat;';
-
-// Font-Weights
-const fontWeight = (weight: number): string => {
-  return `font-weight: ${weight};`;
-};
-
-const fontWeightLight = fontWeight(300);
-const fontWeightNormal = fontWeight(400);
-const fontWeightMedium = fontWeight(500);
-const fontWeightSemiBold = fontWeight(600);
-const fontWeightBold = fontWeight(700);
-const fontWeightExtraBold = fontWeight(800);
-
-// Font-Size - currently only working with pixels
-const fontSize = (size: number): string => {
-  return `font-size: ${size}px;`;
-};
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -33,60 +41,91 @@ const GlobalStyle = createGlobalStyle`
     ${fontFamilySecondary}
     ${fontWeightNormal}
   }
-
-  h1, h2 {
-    ${fontFamilyPrimary}
-  }
-  
-  h3, h4, h5, h6, h7 {
-    ${fontFamilySecondary}
-  }
   
   h1 {
-    ${fontSize(72)}
-    ${fontWeightExtraBold}
+    ${fontFamilyPrimary}
+    ${fontWeightLight}
+
+    ${mobile(fontSize(32.44))}
+    ${tablet(fontSize(47.78))}
+    ${desktop(fontSize(61.04))}
+    ${desktopL(fontSize(89.76))}
   }
 
   h2 {
-    ${fontSize(48)}
-    ${fontWeightExtraBold}
+    ${fontFamilyPrimary}
+    ${fontWeightLight}
+
+    ${mobile(fontSize(28.83))}
+    ${tablet(fontSize(39.81))}
+    ${desktop(fontSize(48.83))}
+    ${desktopL(fontSize(67.34))}
   }
   
   h3 {
-    ${fontSize(48)}
-    ${fontWeightExtraBold}
+    ${fontFamilySecondary}
+    ${fontWeightNormal}
+
+    ${mobile(fontSize(25.63))}
+    ${tablet(fontSize(33.18))}
+    ${desktop(fontSize(39.06))}
+    ${desktopL(fontSize(50.52))}
   }
 
   h4 {
-    ${fontSize(48)}
-    ${fontWeightMedium}
+    ${fontFamilySecondary}
+    ${fontWeightNormal}
+
+    ${mobile(fontSize(22.78))}
+    ${tablet(fontSize(27.65))}
+    ${desktop(fontSize(31.25))}
+    ${desktopL(fontSize(37.9))}
   }
 
   h5 {
-    ${fontSize(24)}
-    ${fontWeightBold}
+    ${fontFamilySecondary}
+    ${fontWeightNormal}
+
+    ${mobile(fontSize(20.25))}
+    ${tablet(fontSize(23.04))}
+    ${desktop(fontSize(25))}
+    ${desktopL(fontSize(28.43))}
   }
 
   h6 {
-    ${fontSize(18)}
-    ${fontWeightLight}
+    ${fontFamilySecondary}
+    ${fontWeightMedium}
+
+    ${mobile(fontSize(18))}
+    ${tablet(fontSize(19.24))}
+    ${desktop(fontSize(20))}
+    ${desktopL(fontSize(21.33))}
   }
 
   h7 {
-    ${fontSize(24)}
-    ${fontWeightLight}
-  }
-
-  s1 {
-    ${fontFamilyPrimary}
-    ${fontWeightLight}
-    ${fontSize(24)}
-  }
-
-  s2 {
     ${fontFamilySecondary}
-    ${fontWeightSemiBold}
-    ${fontSize(22)}
+    ${fontSize(24)}
+    ${fontWeightLight}
+  }
+
+  .s1 {
+    ${fontFamilySecondary}
+    ${fontWeightNormal}
+
+    ${mobile(fontSize(16))}
+    ${tablet(fontSize(16))}
+    ${desktop(fontSize(16))}
+    ${desktopL(fontSize(16))}
+  }
+
+  .s2 {
+    ${fontFamilySecondary}
+    ${fontWeightMedium}
+
+    ${mobile(fontSize(14.22))}
+    ${tablet(fontSize(13.33))}
+    ${desktop(fontSize(12.8))}
+    ${desktopL(fontSize(12))}
   }
 
   button {
@@ -97,14 +136,31 @@ const GlobalStyle = createGlobalStyle`
 
   p {
     ${fontFamilySecondary}
-    ${fontWeightMedium}
-    ${fontSize(24)}
+    ${fontWeightNormal}
+    ${fontColorGray}
+
+    ${mobile(fontSize(16))}
+    ${tablet(fontSize(16))}
+    ${desktop(fontSize(16))}
+    ${desktopL(fontSize(16))}
   }
 
-  p2 {
-    ${fontFamilySecondary}
-    ${fontWeightMedium}
-    ${fontSize(12)}
+  caption {
+    ${fontWeightNormal}
+    
+    ${mobile(fontSize(12.64))}
+    ${tablet(fontSize(11.11))}
+    ${desktop(fontSize(10.24))}
+    ${desktopL(fontSize(9))}
+  }
+
+  label {
+    ${fontWeightNormal}
+
+    ${mobile(fontSize(11.24))}
+    ${tablet(fontSize(9.26))}
+    ${desktop(fontSize(8.19))}
+    ${desktopL(fontSize(6.76))}
   }
 `;
 

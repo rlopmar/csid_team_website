@@ -4,8 +4,11 @@ import { GlobalStyle } from 'global/theme';
 import styled from 'styled-components';
 
 import Navbar from 'Navbar';
+import Footer from 'Footer';
 
-const Body = styled.div``;
+const Body = styled.div`
+  overflow: hidden;
+`;
 
 export default function PageBase(props): ReactElement {
   return (
@@ -24,6 +27,7 @@ export default function PageBase(props): ReactElement {
       </Head>
       <Navbar />
       <Body>{props.children}</Body>
+      <Footer />
     </>
   );
 }

@@ -13,16 +13,15 @@ import { cards, CardInfo } from './focus';
 
 const Card = styled.section`
   box-shadow: 0px 5px 15px rgb(0, 0, 0, 0.1);
-  background-color: white;
+  background-color: white !important;
   border-radius: 5px;
   width: auto;
-  height: 130px;
+  height: 180px;
   padding: 20px;
   margin: 10px;
 `;
 
 const CardTitle = styled.h3`
-  font-size: 1.1rem;
   color: ${colors.primary.doveGray};
 `;
 

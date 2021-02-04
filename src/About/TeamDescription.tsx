@@ -1,26 +1,34 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colors } from 'global';
+import { colors, device } from 'global';
 
 const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 500px;
+
+  @media${device.tablet} {
+    padding-left: 40%;
+    padding-right: 20px;
+  }
 `;
 
-const H3 = styled.h3`
+const Title = styled.h2`
   color: ${colors.primary.doveGray};
   margin-bottom: 0px;
   text-align: center;
 `;
 
 const P = styled.p`
-  text-align: justify;
+  // text-align: justify;
 `;
 
 export default function TeamDescription() {
   return (
     <Wrapper>
-      <H3>CSID Team</H3>
+      <Title>CSID Team</Title>
       <P>
         Contrary to popular belief, Lorem Ipsum is not simply random text. It
         has roots in a piece of classical Latin literature from 45 BC, making it

@@ -2,15 +2,13 @@ import { ReactElement } from 'react';
 import styled from 'styled-components';
 import 'next-images';
 import { device } from 'global';
+import { Parallax } from 'react-parallax';
 
 const Wrapper = styled.div`
-  background-image: url('/Images/LandingPage.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-top: 70px;
+  padding-top: 170px;
   padding-bottom: 50px;
   margin-top: -70px;
-  z-index: 1 !important;
+  z-index: 2;
 `;
 
 const Main = styled.main`
@@ -18,22 +16,19 @@ const Main = styled.main`
   margin: 0 5vw;
 `;
 
-const H1 = styled.h1`
+const Slogan = styled.h1`
   margin-bottom: 0;
   color: white;
   text-shadow: 1px 2px black;
   -webkit-text-stroke: 0.5px black;
   padding-bottom: 0;
   word-break: break-word;
-  font-size: 2rem;
   margin-bottom: 0px;
 
   @media${device.mobile} {
-    font-size: 2.5rem;
   }
 
   @media${device.mobileL} {
-    font-size: 3rem;
     margin-bottom: -25px;
   }
 `;
@@ -43,7 +38,7 @@ const Section = styled.section`
   margin-top: 100px;
 `;
 
-const P = styled.p`
+const P = styled.h6`
   margin-bottom: 0;
   margin-top: 0;
   color: white;
@@ -51,39 +46,39 @@ const P = styled.p`
   word-break: break-word;
 `;
 
-const H3 = styled.h3`
+const Title = styled.h2`
   margin-top: 0;
   margin-bottom: 0;
   color: white;
-  text-shadow: 1px 2px black;
-  -webkit-text-stroke: 0.5px black;
+  text-shadow: 1px 1px black;
+  -webkit-text-stroke: 0.4px black;
   word-break: break-word;
-
-  @media${device.mobile} {
-    font-size: 2.5rem;
-  }
-
-  @media${device.mobileL} {
-    font-size: 3rem;
-  }
 `;
 
-export default function Hero(props): ReactElement {
+export default function Hero(): ReactElement {
   return (
-    <Wrapper>
-      <Main>
-        <div>
-          <H1>Innovate to make </H1>
-          <H1 style={{ marginTop: 0 }}>your future safer</H1>
+    <Parallax
+      bgImage={'/Images/LandingPage.jpg'}
+      style={{
+        marginTop: '-70px',
+        paddingBottom: '70px',
+        zIndex: '-1',
+      }}
+    >
+      <Wrapper id='hero'>
+        <Main>
+          <div>
+            <Slogan>Innovate to make </Slogan>
+            <Slogan style={{ marginTop: 0 }}>your future safer</Slogan>
 
-          <Section>
-            <P>We are a team of</P>
-            <H3>Customer Success Innovation Development</H3>
-            <P>at SAP</P>
-          </Section>
-        </div>
-      </Main>
-      {/* <img src='/LandingPage.jpg' /> */}
-    </Wrapper>
+            <Section>
+              <P>We are a team of</P>
+              <Title>Customer Success Innovation Development</Title>
+              <P>at SAP</P>
+            </Section>
+          </div>
+        </Main>
+      </Wrapper>
+    </Parallax>
   );
 }

@@ -1,22 +1,20 @@
 import styled from 'styled-components';
-import { colors, device } from 'global';
+import { colors } from 'global';
 import Card from 'Card';
 import { cards, CardInfo } from './focus';
 
-const CardTitle = styled.h3`
-  font-size: 1.1rem;
+const CardTitle = styled.h5`
   color: ${colors.primary.doveGray};
 `;
 
-const CardBody = styled.p`
-  font-size: 1rem;
-`;
+const CardBody = styled.p``;
 
 const Img = styled.img`
+  z-index: -1;
   height: 60px;
   width: auto;
   padding-top: 10px;
-  filter: hue-rotate(5deg) brightness(0.7);
+  filter: hue-rotate(20deg) brightness(1);
 `;
 
 function renderCard(el: CardInfo, withDescription: boolean) {
