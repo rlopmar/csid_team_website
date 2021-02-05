@@ -22,6 +22,7 @@
     "react-dom": "16.14.0",
     "react-parallax": "^3.1.2",
     "react-scroll": "^1.8.1",
+    "react-simple-maps": "^2.3.0",
     "react-tooltip": "^4.2.13",
     "styled-components": "^5.2.0"
   },
