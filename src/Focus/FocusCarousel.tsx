@@ -16,12 +16,12 @@ const Card = styled.section`
   background-color: white !important;
   border-radius: 5px;
   width: auto;
-  height: 180px;
+  height: 130px;
   padding: 20px;
   margin: 10px;
 `;
 
-const CardTitle = styled.h3`
+const CardTitle = styled.p`
   color: ${colors.primary.doveGray};
 `;
 
@@ -38,7 +38,7 @@ function renderFocusCards(cards: CardInfo[]): JSX.Element[] {
       <Slide index={index} key={card.title} style={{ padding: '20px 0' }}>
         <Card>
           <Img src={`/Icons/${card.icon}.svg`}></Img>
-          <CardTitle>{card.title}</CardTitle>
+          <CardTitle className='s1'>{card.title}</CardTitle>
         </Card>
       </Slide>
     );
@@ -50,7 +50,7 @@ export default function Carousel() {
     <CarouselProvider
       naturalSlideWidth={10}
       naturalSlideHeight={1000}
-      visibleSlides={2.5}
+      visibleSlides={1.75}
       step={1}
       infinite={true}
       totalSlides={cards.length}

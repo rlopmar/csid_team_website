@@ -34,14 +34,20 @@ const AvatarCropper = styled.div`
   height: 80px;
   position: relative;
   overflow: hidden;
-  border-radius: 50%;
   margin: 10px 10px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 3px;
+  border-color: white;
 `;
 
 const Avatar = styled.img`
-  height: 80px;
+  width: 80px;
   background-color: rgb(0, 0, 0, 0);
   cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 
   &:hover {
     filter: brightness(0.9);
@@ -55,12 +61,15 @@ const StyledTooltip = styled(ReactTooltip)`
     min-width: 250px;
     padding: 0;
     border-width: 0;
+    box-shadow: 0px 0px 15px rgb(0, 0, 0, 0.4);
   }
 `;
 
 export default function renderAvatars() {
-  const [currentTooltip, setCurrentTooltip] = React.useState<string>();
   const [activeTooltips, setActiveTooltips] = React.useState<boolean>(false);
+  // const [activeAvatar, setActiveAvatar] = React.useState<string>(
+  //   'Sagar the Wizard'
+  // );
 
   React.useEffect(() => {
     setActiveTooltips(true);
@@ -76,26 +85,39 @@ export default function renderAvatars() {
             <Avatars>
               {teamMembers[role.id].map((member) => {
                 return (
-                  <div key={member.name + '-avatar-circle'}>
-                    <Anchor data-event='click' data-tip data-for={member.name}>
-                      <AvatarCropper>
-                        <Avatar src={`${member.avatar}`} />
-                      </AvatarCropper>
-                    </Anchor>
-
-                    {activeTooltips && (
-                      <StyledTooltip
-                        id={member.name}
-                        place='bottom'
-                        effect='solid'
-                        backgroundColor='rgb(255,255,255, 1)'
-                        textColor={colors.secondary.boulder}
-                        clickable={true}
-                        afterShow={() => setCurrentTooltip(member.name)}
+                  <div
+                    style={{ position: 'relative' }}
+                    key={member.name + '-avatar-circle'}
+                  >
+                    <div>
+                      <AvatarCropper
+                        data-event='click'
+                        data-tip
+                        data-for={member.name}
                       >
-                        {AvatarTooltip(member, role)}
-                      </StyledTooltip>
-                    )}
+                        <Avatar src={member.avatar} />
+                      </AvatarCropper>
+
+                      {activeTooltips && (
+                        <StyledTooltip
+                          id={member.name}
+                          place='bottom'
+                          effect='solid'
+                          backgroundColor='rgb(255,255,255, 1)'
+                          textColor={colors.secondary.boulder}
+                          clickable={true}
+                          globalEventOff='click'
+                          isCapture
+                        >
+                          <div
+                            onClick={(e) => e.stopPropagation()}
+                            style={{ pointerEvents: 'auto', overflowY: 'auto' }}
+                          >
+                            {AvatarTooltip(member, role)}
+                          </div>
+                        </StyledTooltip>
+                      )}
+                    </div>
                   </div>
                 );
               })}

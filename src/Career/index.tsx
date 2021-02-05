@@ -19,8 +19,7 @@ const Wrapper = styled.div`
   padding-right: 5vw;
   padding-bottom: 50px;
 
-  @media${device.tablet} {
-    flex-direction: column;
+  @media${device.mobileL} {
     padding-left: 10%;
   }
 

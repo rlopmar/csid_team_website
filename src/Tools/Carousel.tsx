@@ -20,16 +20,16 @@ const Slide = styled(slide)`
   color: white;
 `;
 
-const SlideTitle = styled.h3`
+const SlideTitle = styled.h4`
   padding-bottom: 220px;
 `;
 
-const SlideDescription = styled.h6`
+const SlideDescription = styled.p`
   // padding-bottom: 220px;
   max-width: 90%;
   color: white;
   position: absolute;
-  bottom: 100px;
+  bottom: 120px;
 `;
 
 const SlideFooter = styled.div`

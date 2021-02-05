@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { device } from 'global';
 
 import DesktopAvatars from './DesktopAvatars';
+import Manager from './Manager';
 
 const Container = styled.section`
   background-color: #3b3b3b;
@@ -37,6 +38,7 @@ export default function TeamMembers() {
         <DesktopAvatars />
       </Desktop>
       <Mobile>mobile</Mobile>
+      <Manager />
     </Container>
   );
 }

@@ -38,7 +38,7 @@ const Section = styled.section`
   margin-top: 100px;
 `;
 
-const P = styled.h6`
+const P = styled.p`
   margin-bottom: 0;
   margin-top: 0;
   color: white;
@@ -48,7 +48,7 @@ const P = styled.h6`
 
 const Title = styled.h2`
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: -5px;
   color: white;
   text-shadow: 1px 1px black;
   -webkit-text-stroke: 0.4px black;
@@ -72,9 +72,9 @@ export default function Hero(): ReactElement {
             <Slogan style={{ marginTop: 0 }}>your future safer</Slogan>
 
             <Section>
-              <P>We are a team of</P>
+              <P className='s1'>We are a team of</P>
               <Title>Customer Success Innovation Development</Title>
-              <P>at SAP</P>
+              <P className='s1'>at SAP</P>
             </Section>
           </div>
         </Main>

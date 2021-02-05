@@ -16,10 +16,22 @@ const Title = styled.div`
   flex-direction: column;
 `;
 
-const Img = styled.img`
+const AvatarCropper = styled.div`
+  width: 60px;
   height: 60px;
-  width: auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
   margin-right: 20px;
+`;
+
+const Img = styled.img`
+  width: 60px;
+  background-color: rgb(0, 0, 0, 0);
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 `;
 
 const Hr = styled.div`
@@ -105,7 +117,9 @@ export default function AvatarTooltip(member, role) {
   return (
     <Wrapper key={name + '-avatar-tooltip'}>
       <Header>
-        <Img src={avatar} />
+        <AvatarCropper>
+          <Img src={avatar} />
+        </AvatarCropper>
         <Title>
           <p style={{ fontWeight: 'bold', marginBottom: 0 }}>{name}</p>
           <p className='s2' style={{ marginTop: '5px' }}>
@@ -115,15 +129,18 @@ export default function AvatarTooltip(member, role) {
       </Header>
 
       <Contact>
-        <ContactItem>
-          <Icon src='/Icons/entypo location.svg' />
+        <ContactItem className='p2'>
+          <Icon
+            src='/Icons/entypo location.svg'
+            style={{ marginLeft: '5px', marginRight: '17px' }}
+          />
           {location}
         </ContactItem>
-        <ContactItem>
+        <ContactItem className='p2'>
           <Icon src='/Icons/email.svg' />
           {email}
         </ContactItem>
-        <ContactItem>
+        <ContactItem className='p2'>
           <Icon src='/Icons/phone.svg' />
           {phoneNumber}
         </ContactItem>
@@ -134,14 +151,19 @@ export default function AvatarTooltip(member, role) {
       <Specializations>
         <p>Specialized in</p>
         {specializations.map((s) => (
-          <li style={{ marginLeft: '25px' }} key={s}>
+          <li style={{ marginLeft: '25px' }} key={s} className='p2'>
             {s}
           </li>
         ))}
       </Specializations>
 
       <Footer>
-        <p className='s2'>Want to know more about me?</p>
+        <p
+          className='s2'
+          style={{ fontWeight: 'bold', color: colors.secondary.boulder }}
+        >
+          Want to know more about me?
+        </p>
         <ContactButton className='s2'>Contact</ContactButton>
       </Footer>
     </Wrapper>

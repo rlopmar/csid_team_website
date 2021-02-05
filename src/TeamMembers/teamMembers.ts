@@ -2,7 +2,7 @@ export const teamMembers = {
   scrumMasters: [
     {
       name: 'Kai Hu',
-      avatar: '/Images/avatar.png',
+      avatar: '/Images/Alberto Delgado.jpeg',
       location: 'Germany',
       email: 'some_email@fake.com',
       phoneNumber: '95729435',
@@ -11,7 +11,7 @@ export const teamMembers = {
     },
     {
       name: 'Master MA',
-      avatar: '/Images/avatar.png',
+      avatar: '/Images/Alberto Delgado.jpeg',
       location: 'Lo Bole',
       email: 'ma-MA@ma.com',
       phoneNumber: '39842423432',
@@ -22,7 +22,7 @@ export const teamMembers = {
   productOwners: [
     {
       name: 'UUUUlf',
-      avatar: '/Images/avatar.png',
+      avatar: '/Images/Alberto Delgado.jpeg',
       location: 'Ulfland',
       email: 'uuulfito_dinamito@yeah.com',
       phoneNumber: '94567397',
@@ -31,7 +31,7 @@ export const teamMembers = {
     },
     {
       name: 'Will Dafoe',
-      avatar: '/Images/avatar.png',
+      avatar: '/Images/Alberto Delgado.jpeg',
       location: 'Hobbiton',
       email: 'dafoe@will.com',
       phoneNumber: '2394572',
@@ -42,7 +42,7 @@ export const teamMembers = {
   developers: [
     {
       name: 'El churrascas',
-      avatar: '/Images/avatar.png',
+      avatar: '/Images/Alberto Delgado.jpeg',
       location: 'BcnCity',
       email: 'churras_quito@quitoquito.com',
       phoneNumber: '9423579287',
@@ -51,7 +51,7 @@ export const teamMembers = {
     },
     {
       name: 'Noche de Sergelo',
-      avatar: '/Images/avatar.png',
+      avatar: '/Images/Alberto Delgado.jpeg',
       location: 'Paradise City',
       email: 'nocheDeSergel@night.com',
       phoneNumber: '2398457',
@@ -60,7 +60,7 @@ export const teamMembers = {
     },
     {
       name: 'Universal Data Citizen',
-      avatar: '/Images/avatar.png',
+      avatar: '/Images/Alberto Delgado.jpeg',
       location: 'Ill be back',
       email: 'universal.soldier@ssapito.com',
       phoneNumber: 'phone number',
@@ -71,7 +71,7 @@ export const teamMembers = {
   designers: [
     {
       name: 'Sagar the Wizard',
-      avatar: '/Images/avatar.png',
+      avatar: '/Images/Alberto Delgado.jpeg',
       location: 'MiddleSAP',
       email: 'wizard@theWhite.com',
       phoneNumber: '238749',

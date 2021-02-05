@@ -13,8 +13,14 @@ const Background = styled.div`
   top: 0;
   left: 0;
   background-color: rgb(0, 0, 0, 0);
-  width: 100%;
+  width: 100vw !important;
   height: 70px;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version */
 `;
 
 const Nav = styled.nav`
@@ -31,12 +37,24 @@ const Nav = styled.nav`
   align-content: center;
   margin-bottom: 0;
   z-index: 3;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version */
 `;
 
 const Sections = styled.div`
   display: flex;
   line-height: 70px;
   cursor: pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version */
 `;
 
 const NavItem = styled.div`
@@ -45,6 +63,12 @@ const NavItem = styled.div`
   color: white;
   text-shadow: 1px 1px black;
   padding: 0 5px;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version */
 
   &:hover {
     color: white;
@@ -64,11 +88,12 @@ const NavItem = styled.div`
 `;
 
 const Logo = styled.div`
-  display: none;
+  visibility: hidden;
   color: white;
+  width: 0px;
 
   @media${device.mobileL} {
-    display: block;
+    visibility: visible;
   }
 `;
 
@@ -97,7 +122,7 @@ export default function Navbar() {
             smooth={true}
             offset={-70}
           >
-            <Img src='/Logos/CSIDBlueAsset1xxhdpi.svg'></Img>
+            <Img src='/Logos/CSIDLightAsset2xxhdpi.svg'></Img>
           </Link>
         </Logo>
         <Sections>
@@ -109,7 +134,7 @@ export default function Navbar() {
               smooth={true}
               offset={-70}
             >
-              <NavItem>{section}</NavItem>
+              <NavItem className='s1'>{section}</NavItem>
             </Link>
           ))}
         </Sections>

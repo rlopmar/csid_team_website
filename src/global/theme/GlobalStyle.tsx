@@ -102,12 +102,6 @@ const GlobalStyle = createGlobalStyle`
     ${desktopL(fontSize(21.33))}
   }
 
-  h7 {
-    ${fontFamilySecondary}
-    ${fontSize(24)}
-    ${fontWeightLight}
-  }
-
   .s1 {
     ${fontFamilySecondary}
     ${fontWeightNormal}
@@ -143,6 +137,15 @@ const GlobalStyle = createGlobalStyle`
     ${tablet(fontSize(16))}
     ${desktop(fontSize(16))}
     ${desktopL(fontSize(16))}
+  }
+
+  .p2 {
+    ${fontWeightNormal}
+
+    ${mobile(fontSize(14.22))}
+    ${tablet(fontSize(13.33))}
+    ${desktop(fontSize(12.8))}
+    ${desktopL(fontSize(12))}
   }
 
   caption {
