@@ -7,7 +7,11 @@ import Manager from './Manager';
 
 const Container = styled.section`
   background-color: #3b3b3b;
-  padding: 50px 10vw;
+  padding: 50px 10px;
+
+  @media${device.laptop} {
+    padding: 50px 10vw;
+  }
 `;
 
 const Title = styled.h2`

@@ -12,6 +12,8 @@ const Container = styled.div`
 const Column = styled.section`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  align-content: center;
   width: 25% !important;
 `;
 
@@ -26,6 +28,17 @@ const Label = styled.h6`
   font-weight: bold;
 `;
 
+const AvatarsContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: white;
+  flex-wrap: wrap;
+`;
+
 function renderRoles(roles: typeof ROLES) {
   return (
     <Container>
@@ -34,7 +47,7 @@ function renderRoles(roles: typeof ROLES) {
           <Column key={role.name}>
             <Img src={role.img} />
             <Label>{role.name}</Label>
-            {Avatars(role, 'desktop')}
+            <AvatarsContainer>{Avatars(role, 'desktop')}</AvatarsContainer>
           </Column>
         );
       })}

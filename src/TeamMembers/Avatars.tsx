@@ -6,39 +6,11 @@ import ReactTooltip from 'react-tooltip';
 import { device, colors } from 'global';
 import AvatarTooltip from './AvatarTooltip';
 
-// const Container = styled.div`
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-between;
-// `;
-
-const Container = styled.section`
-  display: flex;
-  flex-direction: row;
-
-  @media${device.laptop} {
-    display: flex;
-    flex-direction: column;
-    width: 100% !important;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-`;
-
-const Avatars = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  margin-left: 5px;
-  color: white;
-  flex-wrap: wrap;
-`;
-
 const AvatarContainer = styled.div`
-  position: relative;
+  // width: 100px;
+  // position: relative;
+  // display: flex;
+  // justify-content: center;
 
   @media${device.laptop} {
     width: 50%;
@@ -72,7 +44,13 @@ const Avatar = styled.img`
 `;
 
 const StyledTooltip = styled(ReactTooltip)`
+  z-index: 999 !important;
+  position: fixed !important;
+
   &.show {
+    z-index: 999 !important;
+    position: fixed !important;
+    visibility: visible;
     opacity: 1 !important;
     border-radius: 8px;
     min-width: 250px;
@@ -91,47 +69,44 @@ export default function renderAvatars(role: Role, viewport: string) {
     return () => setActiveTooltips(false);
   }, []);
 
-  return (
-    <Container key={role.name + '-avatars'}>
-      <Avatars>
-        {teamMembers[role.id].map((member) => {
-          return (
-            <AvatarContainer key={member.name + '-avatar-circle-' + viewport}>
-              <AvatarCropper
-                data-tip='click'
-                data-event='mouseenter click'
-                data-event-off='mouseleave'
-                data-for={member.name + '-' + viewport}
-                data-delay-hide={200}
-              >
-                <Avatar src={member.avatar} />
-              </AvatarCropper>
+  return teamMembers[role.id].map((member) => {
+    return (
+      <AvatarContainer
+        key={member.name + '-avatar-circle-' + viewport}
+        onClick={() => console.log('eo')}
+      >
+        <AvatarCropper
+          data-tip='click'
+          data-event='mouseenter click'
+          data-event-off='mouseleave'
+          data-for={member.name + '-' + viewport}
+          data-delay-hide={200}
+        >
+          <Avatar src={member.avatar} />
+        </AvatarCropper>
 
-              {activeTooltips && (
-                <StyledTooltip
-                  id={member.name + '-' + viewport}
-                  place='bottom'
-                  effect='solid'
-                  backgroundColor='rgb(255,255,255, 1)'
-                  textColor={colors.secondary.boulder}
-                  clickable={true}
-                  globalEventOff='click'
-                  isCapture
-                >
-                  <div
-                    onClick={(e) => {
-                      e.stopPropagation();
-                    }}
-                    style={{ pointerEvents: 'auto', overflowY: 'auto' }}
-                  >
-                    {AvatarTooltip(member, role)}
-                  </div>
-                </StyledTooltip>
-              )}
-            </AvatarContainer>
-          );
-        })}
-      </Avatars>
-    </Container>
-  );
+        {activeTooltips && viewport !== 'mobile' && (
+          <StyledTooltip
+            id={member.name + '-' + viewport}
+            place={viewport === 'mobile' ? 'right' : 'bottom'}
+            effect='solid'
+            backgroundColor='rgb(255,255,255, 1)'
+            textColor={colors.secondary.boulder}
+            clickable={true}
+            globalEventOff='click'
+            isCapture
+          >
+            <div
+              onClick={(e) => {
+                e.stopPropagation();
+              }}
+              style={{ pointerEvents: 'auto' }}
+            >
+              {AvatarTooltip(member, role)}
+            </div>
+          </StyledTooltip>
+        )}
+      </AvatarContainer>
+    );
+  });
 }

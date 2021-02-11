@@ -18,7 +18,8 @@ const Container = styled.div`
 `;
 
 const SlideWrapper = styled.div`
-  box-shadow: 0 0 50px rgb(0, 0, 0, 0.3), 0 5px 10px rgb(30, 30, 30, 0.5);
+  box-shadow: 0 0 50px rgb(0, 0, 0, 0.3), 0 5px 10px rgb(30, 30, 30, 0.5),
+    inset 0 0 20px rgb(0, 0, 0);
   border-radius: 0;
   width: 100vw;
 

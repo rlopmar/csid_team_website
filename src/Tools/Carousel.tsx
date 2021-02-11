@@ -11,7 +11,7 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 import { backgroundColors } from './slideColors';
 import tools from './tools.json';
 import useWindowDimensions from 'WindowDimensions';
-import { calculateVisibleSlides } from './calculateSlides';
+import { calculateVisibleSlides } from './calculateVisibleSlides';
 
 const Slide = styled(slide)`
   position: relative !important;

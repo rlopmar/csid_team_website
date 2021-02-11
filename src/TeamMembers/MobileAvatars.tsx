@@ -1,44 +1,70 @@
 import styled from 'styled-components';
 import {
   CarouselProvider,
-  Slider,
-  Slide,
-  ButtonBack,
-  ButtonNext,
+  Slider as slider,
+  Slide as slide,
 } from 'pure-react-carousel';
 import ROLES from './roles';
 import { teamMembers } from './teamMembers';
 import { Role } from './roles';
 import Avatars from './Avatars';
+import useWindowDimensions from 'WindowDimensions';
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
 `;
 
-function renderRows(roles: typeof ROLES) {
-  return roles.map((role, index) => {
+const Slider = styled(slider)`
+  width: 100% !important;
+`;
+
+const Slide = styled(slide)`
+  // width: 120px !important;
+`;
+
+const Img = styled.img`
+  width: 120px;
+  padding: 0 20px;
+  margin-bottom: 30px;
+`;
+
+function renderRows(roles: typeof ROLES, width: number) {
+  return roles.map((role) => {
     const members = teamMembers[role.id];
+
     return (
       <CarouselProvider
-        naturalSlideWidth={50}
-        naturalSlideHeight={100}
-        totalSlides={members.length}
-        isIntrinsicHeight={true}
-        step={1}
+        visibleSlides={Math.floor(width / 120)}
+        naturalSlideWidth={100}
+        naturalSlideHeight={9999}
+        totalSlides={members.length + 1}
         infinite={true}
+        dragEnabled={true}
+        touchEnabled={true}
+        isIntrinsicHeight={true}
         key={role.id + '-carousel'}
       >
-        <Slider>{renderRoleMembers(role, index)}</Slider>
+        <Slider>
+          <Slide index={0} style={{ marginRight: '50px' }}>
+            <Img src={role.img} />
+          </Slide>
+          {renderRoleMembers(role)}
+        </Slider>
       </CarouselProvider>
     );
   });
 }
 
-function renderRoleMembers(role: Role, index: number) {
-  return <Slide index={index}>{Avatars(role, 'mobile')}</Slide>;
+function renderRoleMembers(role: Role) {
+  return Avatars(role, 'mobile').map((avatar, index) => (
+    <Slide index={index + 1} key={role.name + '-mobile-avatar-' + (index + 1)}>
+      {avatar}
+    </Slide>
+  ));
 }
 
 export default function MobileAvatars() {
-  return <Container>{renderRows(ROLES)}</Container>;
+  const width = useWindowDimensions().width;
+  return <Container>{renderRows(ROLES, width)}</Container>;
 }
