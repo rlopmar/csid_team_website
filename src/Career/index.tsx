@@ -67,7 +67,7 @@ const PositionDetails = styled.h6`
 
 const ApplyButton = styled.button`
   position: absolute;
-  left: 250px;
+  left: 210px;
   top: 20px;
   padding: 5px 40px;
   border-radius: 5px;
@@ -77,6 +77,14 @@ const ApplyButton = styled.button`
   border-width: 1px;
   color: ${colors.secondary.scienceBlue};
   cursor: pointer;
+
+  @media${device.mobileL} {
+    left: 250px;
+  }
+
+  @media${device.tablet} {
+    left: 250px;
+  }
 
   &:hover {
     color: white;

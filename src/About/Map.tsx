@@ -16,15 +16,13 @@ const Img = styled.img`
   @media${device.tablet} {
     position: absolute;
     left: 0;
-    padding-left: 10%;
-    width: 50%;
+    padding-left: 15%;
   }
 
-  @media${device.desktop} {
+  @media${device.desktopL} {
     position: absolute;
     padding-left: 20%;
     left: 0;
-    width: 50%;
   }
 `;
 

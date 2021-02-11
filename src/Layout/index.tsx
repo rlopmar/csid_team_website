@@ -8,6 +8,8 @@ import Footer from 'Footer';
 
 const Body = styled.div`
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 `;
 
 export default function PageBase(props): ReactElement {
@@ -26,6 +28,7 @@ export default function PageBase(props): ReactElement {
         ></link>
       </Head>
       <Navbar />
+
       <Body>{props.children}</Body>
       <Footer />
     </>

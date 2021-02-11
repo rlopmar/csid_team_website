@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { roles as ROLES } from './roles';
+import ROLES, { Role } from './roles';
 import Avatars from './Avatars';
 
 const Container = styled.div`
@@ -34,6 +34,7 @@ function renderRoles(roles: typeof ROLES) {
           <Column key={role.name}>
             <Img src={role.img} />
             <Label>{role.name}</Label>
+            {Avatars(role, 'desktop')}
           </Column>
         );
       })}
@@ -42,10 +43,5 @@ function renderRoles(roles: typeof ROLES) {
 }
 
 export default function DesktopAvatars() {
-  return (
-    <div>
-      {renderRoles(ROLES)}
-      <Avatars />
-    </div>
-  );
+  return <div>{renderRoles(ROLES)}</div>;
 }

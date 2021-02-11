@@ -1,4 +1,10 @@
-export const roles = [
+export interface Role {
+  id: string;
+  name: string;
+  img: string;
+}
+
+export default [
   {
     id: 'scrumMasters',
     name: 'Scrum Masters',

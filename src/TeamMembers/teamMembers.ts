@@ -1,57 +1,67 @@
+export interface MembersInfo {
+  name: string;
+  avatar: string;
+  location: string;
+  email: string;
+  phoneNumber: string;
+  responsabilities: string[];
+  specializations: string[];
+}
+
 export const teamMembers = {
   scrumMasters: [
     {
       name: 'Kai Hu',
-      avatar: '/Images/Alberto Delgado.jpeg',
+      avatar: '/Avatars/Kai-Hu.png',
       location: 'Germany',
-      email: 'some_email@fake.com',
-      phoneNumber: '95729435',
-      responsibilities: 'responsibilities',
+      email: 'kai.hu@sap.com',
+      phoneNumber: '+44 95729435',
+      responsibilities: ['responsibilities'],
       specializations: ['Project Management', 'Soft skills', 'Negotiation'],
-    },
-    {
-      name: 'Master MA',
-      avatar: '/Images/Alberto Delgado.jpeg',
-      location: 'Lo Bole',
-      email: 'ma-MA@ma.com',
-      phoneNumber: '39842423432',
-      responsibilities: 'responsibilities',
-      specializations: ['Architect', 'Leader', 'Sustainability'],
     },
   ],
   productOwners: [
     {
-      name: 'UUUUlf',
-      avatar: '/Images/Alberto Delgado.jpeg',
-      location: 'Ulfland',
-      email: 'uuulfito_dinamito@yeah.com',
-      phoneNumber: '94567397',
-      responsibilities: 'responsibilities',
+      name: 'Brian Keenan',
+      avatar: '/Avatars/Brian-Keenan.png',
+      location: 'Barcelona',
+      email: 'brian.keenan@sap.com',
+      phoneNumber: '+44 94567397',
+      responsibilities: ['responsibilities'],
       specializations: ['Dragon Slayer', 'Master of Water'],
     },
     {
-      name: 'Will Dafoe',
-      avatar: '/Images/Alberto Delgado.jpeg',
-      location: 'Hobbiton',
-      email: 'dafoe@will.com',
-      phoneNumber: '2394572',
-      responsibilities: 'responsibilities',
+      name: 'Angel Garcia',
+      avatar: '/Avatars/Angel-Garcia.png',
+      location: 'Germany',
+      email: 'angel.garcia@sap.com',
+      phoneNumber: '+44 94567397',
+      responsibilities: ['responsibilities'],
+      specializations: ['Dragon Slayer', 'Master of Water'],
+    },
+    {
+      name: 'Carlos Delgado',
+      avatar: '/Avatars/Carlos Delgado.jpg',
+      location: 'Barcelona',
+      email: 'carlos.delgado02@will.com',
+      phoneNumber: '+34 2394572',
+      responsibilities: ['responsibilities'],
       specializations: ['Big Datanalytics', 'Visionaire'],
     },
   ],
   developers: [
     {
       name: 'El churrascas',
-      avatar: '/Images/Alberto Delgado.jpeg',
+      avatar: '/Avatars/Rafael-Lopez.png',
       location: 'BcnCity',
       email: 'churras_quito@quitoquito.com',
-      phoneNumber: '9423579287',
-      responsibilities: 'responsibilities',
+      phoneNumber: '+34 9423579287',
+      responsibilities: ['responsibilities'],
       specializations: ['BBQ Master', 'Fastest hand in west'],
     },
     {
       name: 'Noche de Sergelo',
-      avatar: '/Images/Alberto Delgado.jpeg',
+      avatar: '/Avatars/Alberto-Delgado.jpeg',
       location: 'Paradise City',
       email: 'nocheDeSergel@night.com',
       phoneNumber: '2398457',
@@ -60,7 +70,16 @@ export const teamMembers = {
     },
     {
       name: 'Universal Data Citizen',
-      avatar: '/Images/Alberto Delgado.jpeg',
+      avatar: '/Avatars/Alberto-Delgado.jpeg',
+      location: 'Ill be back',
+      email: 'universal.soldier@ssapito.com',
+      phoneNumber: 'phone number',
+      responsibilities: 'responsibilities',
+      specializations: ['Destroyer'],
+    },
+    {
+      name: 'Cipriano Sanchez',
+      avatar: '/Avatars/Cipriano-Sanchez.png',
       location: 'Ill be back',
       email: 'universal.soldier@ssapito.com',
       phoneNumber: 'phone number',
@@ -71,7 +90,7 @@ export const teamMembers = {
   designers: [
     {
       name: 'Sagar the Wizard',
-      avatar: '/Images/Alberto Delgado.jpeg',
+      avatar: '/Avatars/Sagar.png',
       location: 'MiddleSAP',
       email: 'wizard@theWhite.com',
       phoneNumber: '238749',

@@ -1,32 +1,48 @@
 import React from 'react';
 import styled from 'styled-components';
-import { roles } from './roles';
+import { Role } from './roles';
 import { teamMembers } from './teamMembers';
 import ReactTooltip from 'react-tooltip';
-import { colors } from 'global';
+import { device, colors } from 'global';
 import AvatarTooltip from './AvatarTooltip';
 
-const Container = styled.div`
+// const Container = styled.div`
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
+// `;
+
+const Container = styled.section`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-`;
 
-const Column = styled.section`
-  display: flex;
-  flex-direction: column;
-  width: 25% !important;
+  @media${device.laptop} {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 `;
-
-const Anchor = styled.a``;
 
 const Avatars = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-left: 5px;
   color: white;
   flex-wrap: wrap;
+`;
+
+const AvatarContainer = styled.div`
+  position: relative;
+
+  @media${device.laptop} {
+    width: 50%;
+  }
 `;
 
 const AvatarCropper = styled.div`
@@ -50,7 +66,8 @@ const Avatar = styled.img`
   display: block;
 
   &:hover {
-    filter: brightness(0.9);
+    transition: filter 0.5s linear;
+    filter: brightness(1.2);
   }
 `;
 
@@ -65,11 +82,8 @@ const StyledTooltip = styled(ReactTooltip)`
   }
 `;
 
-export default function renderAvatars() {
+export default function renderAvatars(role: Role, viewport: string) {
   const [activeTooltips, setActiveTooltips] = React.useState<boolean>(false);
-  // const [activeAvatar, setActiveAvatar] = React.useState<string>(
-  //   'Sagar the Wizard'
-  // );
 
   React.useEffect(() => {
     setActiveTooltips(true);
@@ -78,53 +92,46 @@ export default function renderAvatars() {
   }, []);
 
   return (
-    <Container>
-      {roles.map((role) => {
-        return (
-          <Column key={role.name + '-avatars'}>
-            <Avatars>
-              {teamMembers[role.id].map((member) => {
-                return (
-                  <div
-                    style={{ position: 'relative' }}
-                    key={member.name + '-avatar-circle'}
-                  >
-                    <div>
-                      <AvatarCropper
-                        data-event='click'
-                        data-tip
-                        data-for={member.name}
-                      >
-                        <Avatar src={member.avatar} />
-                      </AvatarCropper>
+    <Container key={role.name + '-avatars'}>
+      <Avatars>
+        {teamMembers[role.id].map((member) => {
+          return (
+            <AvatarContainer key={member.name + '-avatar-circle-' + viewport}>
+              <AvatarCropper
+                data-tip='click'
+                data-event='mouseenter click'
+                data-event-off='mouseleave'
+                data-for={member.name + '-' + viewport}
+                data-delay-hide={200}
+              >
+                <Avatar src={member.avatar} />
+              </AvatarCropper>
 
-                      {activeTooltips && (
-                        <StyledTooltip
-                          id={member.name}
-                          place='bottom'
-                          effect='solid'
-                          backgroundColor='rgb(255,255,255, 1)'
-                          textColor={colors.secondary.boulder}
-                          clickable={true}
-                          globalEventOff='click'
-                          isCapture
-                        >
-                          <div
-                            onClick={(e) => e.stopPropagation()}
-                            style={{ pointerEvents: 'auto', overflowY: 'auto' }}
-                          >
-                            {AvatarTooltip(member, role)}
-                          </div>
-                        </StyledTooltip>
-                      )}
-                    </div>
+              {activeTooltips && (
+                <StyledTooltip
+                  id={member.name + '-' + viewport}
+                  place='bottom'
+                  effect='solid'
+                  backgroundColor='rgb(255,255,255, 1)'
+                  textColor={colors.secondary.boulder}
+                  clickable={true}
+                  globalEventOff='click'
+                  isCapture
+                >
+                  <div
+                    onClick={(e) => {
+                      e.stopPropagation();
+                    }}
+                    style={{ pointerEvents: 'auto', overflowY: 'auto' }}
+                  >
+                    {AvatarTooltip(member, role)}
                   </div>
-                );
-              })}
-            </Avatars>
-          </Column>
-        );
-      })}
+                </StyledTooltip>
+              )}
+            </AvatarContainer>
+          );
+        })}
+      </Avatars>
     </Container>
   );
 }

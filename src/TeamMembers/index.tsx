@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { device } from 'global';
 
 import DesktopAvatars from './DesktopAvatars';
+import MobileAvatars from './MobileAvatars';
 import Manager from './Manager';
 
 const Container = styled.section`
@@ -37,7 +38,9 @@ export default function TeamMembers() {
       <Desktop>
         <DesktopAvatars />
       </Desktop>
-      <Mobile>mobile</Mobile>
+      <Mobile>
+        <MobileAvatars />
+      </Mobile>
       <Manager />
     </Container>
   );

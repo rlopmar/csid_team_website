@@ -34,16 +34,19 @@ const AvatarWrapper = styled.div`
 `;
 
 const AvatarCropper = styled.div`
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   position: relative;
   overflow: hidden;
   border-radius: 50%;
-  margin: 10px 10px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: white;
+  margin: 0px 10px;
 `;
 
 const Avatar = styled.img`
-  height: 150px;
+  height: 180px;
   width: auto;
 `;
 
@@ -89,7 +92,7 @@ export default function Manager() {
       <Body>
         <AvatarWrapper>
           <AvatarCropper>
-            <Avatar src='/Images/avatar.png' />
+            <Avatar src='/Avatars/Barry-Cunningham.png' />
           </AvatarCropper>
         </AvatarWrapper>
         <ManagerDetails>
