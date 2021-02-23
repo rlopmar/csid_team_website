@@ -22,12 +22,13 @@ const Title = styled.h2`
 `;
 
 const MaxWidth = styled.div`
-  max-width: 800px;
+  max-width: 900px;
 `;
 
 const P = styled.p`
   color: white;
   text-align: center;
+  line-height: 1.5;
 `;
 
 export default function Tools() {
@@ -37,9 +38,15 @@ export default function Tools() {
         <Title>Our tools</Title>
         <MaxWidth>
           <P>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley
+            We provide best-in-class tools for Customer Success. Our tools are
+            driving better business outcomes for our customers through
+            intelligently guided adoption & usage of SAP’s cloud solution
+            portfolio. Automation we provide is enabling efficient delivery for
+            SAP’s customer success front-office and expert roles. We are
+            currently development Intelligent tools using all SAP’s innovations,
+            such as Fiori, Cloud Application Programming Model (CAP) on Node.js
+            and are built on SAP Cloud Platform or SAP’s internal Infrastructure
+            like Service Delivery Center (SDC) or Usage Analyzer (UA).
           </P>
         </MaxWidth>
       </Header>

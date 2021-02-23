@@ -34,6 +34,8 @@ const Wrapper = styled.div`
 `;
 
 const ContactInformation = styled.p`
+  line-height: 1.5;
+
   @media${device.laptop} {
     width: 50%;
   }
@@ -55,9 +57,11 @@ const Position = styled.div`
 
 const PositionName = styled.h6`
   font-weight: 600;
+  font-size: 100%;
   color: ${colors.secondary.boulder};
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 10px;
+  max-width: 300px;
 `;
 
 const PositionDetails = styled.h6`
@@ -66,9 +70,7 @@ const PositionDetails = styled.h6`
 `;
 
 const ApplyButton = styled.button`
-  position: absolute;
-  left: 210px;
-  top: 20px;
+  position: relative;
   padding: 5px 40px;
   border-radius: 5px;
   background-color: rgb(0, 0, 0, 0);
@@ -77,13 +79,23 @@ const ApplyButton = styled.button`
   border-width: 1px;
   color: ${colors.secondary.scienceBlue};
   cursor: pointer;
+  margin-top: 10px;
 
   @media${device.mobileL} {
-    left: 250px;
+    position: absolute;
+    top: 20px;
+    left: 350px;
   }
 
   @media${device.tablet} {
-    left: 250px;
+    left: 320px;
+  }
+
+  &:disabled {
+    background-color: gray;
+    color: white;
+    cursor: not-allowed;
+    border-color: gray;
   }
 
   &:hover {
@@ -119,49 +131,59 @@ export default function Career() {
       <Title>Do you want to join CSID team?</Title>
       <Wrapper>
         <ContactInformation>
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don't look even slightly believable.
+          We are offering a one-stop experience from an idea to the Go-Live of a
+          product. As part of the Customer Success Innovation Development Team,
+          you will be working in an international team with contacts to the
+          delivery units of the Customer Success Group and many other SAP units,
+          such as T&I, GCO, GBO, ID&A and SAP Global IT.
           <br />
           <br />
-          If you are going to use a passage of Lorem Ipsum, you need to be sure
-          there isn't anything embarrassing hidden in the middle of text. All
-          the Lorem Ipsum generators on the Internet tend to repeat predefined
-          chunks as necessary, making this the first true generator on the
-          Internet!
+          For cloud solutions, the requirement to ensuring customer success is
+          key.
           <br />
           <br />
-          Contact us at <strong>team-csid@sap.com</strong>
+          Customers expect ongoing guidance for adopting new configuration and
+          usage of all their cloud solutions considering the constant stream of
+          innovation potential coming from SAP in quarterly releases.
+          <br />
+          <br />
+          To serve our customers effectively and efficiently we are aiming to
+          increase delivery capabilities by intelligent tools.
+          <br />
+          <br />
+          These tools are using all of SAP’s innovations, such as Machine
+          Learning, Fiori, Cloud Application Programming Model (CAP) on Node.js
+          and are built on SAP Cloud Platform or SAP’s internal Infrastructure.
         </ContactInformation>
         <Positions>
           <Li>
             <Position>
-              <PositionName>Cloud Architect</PositionName>
+              <PositionName>
+                Working Student (f/m/d) within a team of Project Managers and
+                Development team
+              </PositionName>
               <PositionDetails>
                 St. Leon Rot <br />
-                Posted on: 15.07.2020
+                Posted on: 01.03.2021
               </PositionDetails>
-              <ApplyButton className='s1'>Apply</ApplyButton>
+              <ApplyButton className='s1' disabled>
+                Apply
+              </ApplyButton>
             </Position>
           </Li>
           <Li>
             <Position>
-              <PositionName>Project Consultant</PositionName>
+              <PositionName>
+                Working Student (f/m/d): team Project Management and Development
+                - Intelligent Enterprise Solutions
+              </PositionName>
               <PositionDetails>
                 St. Leon Rot <br />
                 Posted on: 01.07.2020
               </PositionDetails>
-              <ApplyButton className='s1'>Apply</ApplyButton>
-            </Position>
-          </Li>
-          <Li>
-            <Position>
-              <PositionName>10x Developer</PositionName>
-              <PositionDetails>
-                St. Leon Rot <br />
-                Posted on: 29.01.2021
-              </PositionDetails>
-              <ApplyButton className='s1'>Apply</ApplyButton>
+              <ApplyButton className='s1' disabled>
+                Apply
+              </ApplyButton>
             </Position>
           </Li>
         </Positions>

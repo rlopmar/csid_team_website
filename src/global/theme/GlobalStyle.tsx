@@ -44,7 +44,7 @@ const GlobalStyle = createGlobalStyle`
   
   h1 {
     ${fontFamilyPrimary}
-    ${fontWeightLight}
+    ${fontWeightBold}
 
     ${mobile(fontSize(32.44))}
     ${tablet(fontSize(47.78))}
@@ -54,7 +54,7 @@ const GlobalStyle = createGlobalStyle`
 
   h2 {
     ${fontFamilyPrimary}
-    ${fontWeightLight}
+    ${fontWeightBold}
 
     ${mobile(fontSize(28.83))}
     ${tablet(fontSize(39.81))}

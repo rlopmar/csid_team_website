@@ -58,8 +58,8 @@ export default function Carousel() {
     >
       <Slider>{renderFocusCards(cards)}</Slider>
 
-      <ButtonBack>Back</ButtonBack>
-      <ButtonNext>Next</ButtonNext>
+      {/* <ButtonBack>Back</ButtonBack>
+      <ButtonNext>Next</ButtonNext> */}
     </CarouselProvider>
   );
 }

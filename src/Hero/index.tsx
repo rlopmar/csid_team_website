@@ -17,13 +17,15 @@ const Main = styled.main`
 `;
 
 const Slogan = styled.h1`
-  margin-bottom: 0;
-  color: white;
-  text-shadow: 1px 2px black;
-  -webkit-text-stroke: 0.5px black;
-  padding-bottom: 0;
+  text-shadow: 0px 0px 30px rgb(30, 30, 30, 0.6), 0 0 10px rgb(30, 30, 30, 0.4);
+  -webkit-text-stroke: 0.2px black;
   word-break: break-word;
+  color: white;
+  margin-top: 350px;
+  margin-bottom: 0;
+  padding-bottom: 40px;
   margin-bottom: 0px;
+  font-weight: bolder;
 
   @media${device.mobile} {
   }
@@ -33,26 +35,41 @@ const Slogan = styled.h1`
   }
 `;
 
-const Section = styled.section`
-  text-align: left;
-  margin-top: 100px;
+const SubSlogan = styled.h4`
+  margin-bottom: 0;
+  color: white;
+  text-shadow: 0px 0px 30px rgb(30, 30, 30, 0.6), 0 0 10px rgb(30, 30, 30, 0.4);
+  -webkit-text-stroke: 0.2px black;
+  padding-bottom: 0;
+  word-break: break-word;
+  margin-bottom: 0px;
+  font-weight: bold;
 `;
 
-const P = styled.p`
-  margin-bottom: 0;
-  margin-top: 0;
-  color: white;
-  text-shadow: 1px 2px black;
-  word-break: break-word;
+const Section = styled.section`
+  text-align: left;
+  margin-top: 80px;
 `;
 
 const Title = styled.h2`
   margin-top: 0;
   margin-bottom: -5px;
   color: white;
-  text-shadow: 1px 1px black;
+  text-shadow: 0px 0px 30px rgb(30, 30, 30, 0.6), 0 0 10px rgb(30, 30, 30, 0.4);
   -webkit-text-stroke: 0.4px black;
   word-break: break-word;
+`;
+
+const Subtitle = styled.h5`
+  color: white;
+  word-break: break-word;
+  text-shadow: 0px 0px 30px rgb(30, 30, 30, 0.6), 0 0 10px rgb(30, 30, 30, 0.4);
+  margin-bottom: 0;
+  margin-top: 0;
+`;
+
+const Highlight = styled.span`
+  color: #2e84d8;
 `;
 
 export default function Hero(): ReactElement {
@@ -68,13 +85,18 @@ export default function Hero(): ReactElement {
       <Wrapper id='hero'>
         <Main>
           <div>
-            <Slogan>Innovate to make </Slogan>
-            <Slogan style={{ marginTop: 0 }}>your future safer</Slogan>
+            <Slogan>
+              <Highlight>Innovation</Highlight> = Idea + Leader + Team + Plan{' '}
+            </Slogan>
+            <SubSlogan style={{ marginTop: 0 }}>
+              It's not about ideas, it is about{' '}
+              <Highlight>making ideas happen</Highlight>
+            </SubSlogan>
 
             <Section>
-              <P className='s1'>We are a team of</P>
+              <Subtitle>We are a team of</Subtitle>
               <Title>Customer Success Innovation Development</Title>
-              <P className='s1'>at SAP</P>
+              <Subtitle>at SAP</Subtitle>
             </Section>
           </div>
         </Main>

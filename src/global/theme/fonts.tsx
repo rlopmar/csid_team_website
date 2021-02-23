@@ -1,5 +1,5 @@
 // Specify Primary and Secondary Font-Family
-export const fontFamilyPrimary = 'font-family: Khula;';
+export const fontFamilyPrimary = 'font-family: Montserrat;';
 export const fontFamilySecondary = 'font-family: Montserrat;';
 
 // Font-Weights

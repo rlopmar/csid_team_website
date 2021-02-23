@@ -1,18 +1,22 @@
 [
   {
-  "title": "Service Delivery Cloud",
-  "description": ""
+  "title": "Service Delivery Center",
+  "description": "Contribute to Customer Success via driving adoption. CSMs share and discuss the customer-tailored result of the Key Feature Analysis functionality.Service Delivery Center is a platform to create simple or advanced checks and bundle these to services for certain purposes. Additionally, we provide the runtime environment to deliver theses services.",
+  "link":"https://jam4.sapjam.com/groups/Oj4TYkCz3aldY42RNzbAxk/overview_page/JepHAYHRDC6w8zpunzLu6q"
   },
   {
   "title": "Usage Analyzer",
-  "description": "Bring the transparency and power of analytics into your apps. Are your customers using the tools properly?"
+  "description": "Enablement of an automated/predictive usage analyzer.  Next generation architecture based on harmonized data.",
+  "link":""
   },
   {
   "title": "Services Dashboard",
-  "description": "High-end state-of-the-art dashboard creational services and some other fancy words in this description"
+  "description": "High-end state-of-the-art dashboard creational services and some other fancy words in this description",
+  "link": ""
   },
   {
   "title": "Goal Management Tool",
-  "description": "Manage goals, of course."
+  "description": "WIP",
+  "link":""
   }
 ]

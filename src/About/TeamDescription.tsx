@@ -7,7 +7,7 @@ const Wrapper = styled.section`
   flex-direction: column;
   padding-left: 20px;
   padding-right: 20px;
-  max-width: 500px;
+  max-width: 600px;
 
   @media${device.tablet} {
     padding-left: 40%;
@@ -20,27 +20,29 @@ const Wrapper = styled.section`
 `;
 
 const P = styled.p`
-  // text-align: justify;
+  line-height: 1.5;
 `;
 
 export default function TeamDescription() {
   return (
     <Wrapper>
       <P>
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It
-        has roots in a piece of classical Latin literature from 45 BC, making it
-        over 2000 years old. Richard McClintock, a Latin professor at
-        Hampden-Sydney College in Virginia, looked up one of the more obscure
-        Latin words, consectetur, from a Lorem Ipsum passage, and going through
-        the cites of the word in classical literature, discovered the
-        undoubtable source.{' '}
+        Delivery Unit under IES Customer Experience: Customer Engagement
+        Solutions. Customer Success Innovation Development Team, is connecting
+        people, technology and innovation on our journey as part of SAP´s
+        transformation to become a best-run business and the role model of an
+        Intelligent Enterprise.​ With focus on the success of our internal
+        customers, we drive all aspects of innovation, mobile experience,
+        intelligent technologies, platforms, data technology, architecture and
+        engineering tools, across all SAP.
       </P>
       <P>
-        Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
-        Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written
-        in 45 BC. This book is a treatise on the theory of ethics, very popular
-        during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum
-        dolor sit amet..", comes from a line in section 1.10.32.
+        Young and talented team, located in Germany (St. Leon-Rot) and Spain
+        (Barcelona/Madrid), organize to work together to achieve organization
+        goals. Right combination of knowledge, talents and abilities creating a
+        great synergy and great team spirit where creativity, communication,
+        collaborative and positive participation gives the correct ingredients
+        of the team culture.
       </P>
     </Wrapper>
   );

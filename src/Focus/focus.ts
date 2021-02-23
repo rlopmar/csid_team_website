@@ -8,31 +8,31 @@ export const cards: CardInfo[] = [
   {
     title: 'Innovation',
     body:
-      "Lorem Ipsum is simply dummy body of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy body ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic ",
+      'Developing new and improved products and services to add business value to feed customer/employees demand or needs.',
     icon: 'innovation',
   },
   {
     title: 'Agile',
     body:
-      "Lorem Ipsum is simply dummy body of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy body ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+      'To achieve Business Agility, we rapidly increase our ability to deliver innovative products and services to create the right solution for the right customer/employee at the right time.',
     icon: 'agile',
   },
   {
     title: 'Data-Drive',
     body:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen ",
+      'Increasing digitalization is generating more and more data in all areas of business that could be re-use to inform or enhance processes, decision-making, and even a new revenue model.',
     icon: 'datadriven',
   },
   {
     title: 'User Centricity',
     body:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galleym.",
+      'Creating positive employee engagement, more satisfy customer needs, keeping the customer lifetime value of our users at the center of our efforts.',
     icon: 'usercentricity',
   },
   {
     title: 'Customer Success',
     body:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic ",
+      'We ensure a delightful experience for both our customers and employees by focusing on Next Generation Customer Experience and contributing to SAP´s strategic priorities and corporate goals.',
     icon: 'customersuccess',
   },
 ];
