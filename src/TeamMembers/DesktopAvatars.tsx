@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import ROLES, { Role } from './roles';
+import ROLES from './roles';
 import Avatars from './Avatars';
 
 const Container = styled.div`
@@ -26,6 +26,7 @@ const Label = styled.h6`
   text-align: center;
   color: white;
   font-weight: bold;
+  margin-bottom: 70px;
 `;
 
 const AvatarsContainer = styled.div`
@@ -46,7 +47,13 @@ function renderRoles(roles: typeof ROLES) {
         return (
           <Column key={role.name}>
             <Img src={role.img} />
-            <Label>{role.name}</Label>
+            <Label
+              style={{
+                marginBottom: role.id === 'productOwners' ? '46px' : null,
+              }}
+            >
+              {role.name}
+            </Label>
             <AvatarsContainer>{Avatars(role, 'desktop')}</AvatarsContainer>
           </Column>
         );
@@ -55,6 +62,6 @@ function renderRoles(roles: typeof ROLES) {
   );
 }
 
-export default function DesktopAvatars() {
-  return <div>{renderRoles(ROLES)}</div>;
+export default function DesktopAvatars(roles: typeof ROLES) {
+  return <div>{renderRoles(roles)}</div>;
 }

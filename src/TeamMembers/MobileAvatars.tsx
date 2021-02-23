@@ -64,7 +64,7 @@ function renderRoleMembers(role: Role) {
   ));
 }
 
-export default function MobileAvatars() {
+export default function MobileAvatars(roles: typeof ROLES) {
   const width = useWindowDimensions().width;
-  return <Container>{renderRows(ROLES, width)}</Container>;
+  return <Container>{renderRows(roles, width)}</Container>;
 }

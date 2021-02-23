@@ -9,7 +9,7 @@ export interface MembersInfo {
 }
 
 export const teamMembers = {
-  scrumMasters: [
+  agile: [
     {
       name: 'Kai Hu',
       avatar: '/Avatars/Kai-Hu.png',
@@ -18,6 +18,15 @@ export const teamMembers = {
       phoneNumber: '+44 95729435',
       responsibilities: ['responsibilities'],
       specializations: ['Project Management', 'Soft skills', 'Negotiation'],
+    },
+    {
+      name: 'Angel Garcia',
+      avatar: '/Avatars/Angel-Garcia.png',
+      location: 'Germany',
+      email: 'angel.garcia@sap.com',
+      phoneNumber: '+44 94567397',
+      responsibilities: ['responsibilities'],
+      specializations: ['Dragon Slayer', 'Master of Water'],
     },
   ],
   productOwners: [
@@ -30,15 +39,7 @@ export const teamMembers = {
       responsibilities: ['responsibilities'],
       specializations: ['Dragon Slayer', 'Water Bender'],
     },
-    {
-      name: 'Angel Garcia',
-      avatar: '/Avatars/Angel-Garcia.png',
-      location: 'Germany',
-      email: 'angel.garcia@sap.com',
-      phoneNumber: '+44 94567397',
-      responsibilities: ['responsibilities'],
-      specializations: ['Dragon Slayer', 'Master of Water'],
-    },
+
     {
       name: 'Carlos Delgado',
       avatar: '/Avatars/Carlos Delgado.jpg',

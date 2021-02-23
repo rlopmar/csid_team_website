@@ -5,6 +5,8 @@ import DesktopAvatars from './DesktopAvatars';
 import MobileAvatars from './MobileAvatars';
 import Manager from './Manager';
 
+import ROLES from './roles';
+
 const Container = styled.section`
   background-color: #3b3b3b;
   padding: 50px 10px;
@@ -39,12 +41,8 @@ export default function TeamMembers() {
   return (
     <Container id='team'>
       <Title>We are a team of</Title>
-      <Desktop>
-        <DesktopAvatars />
-      </Desktop>
-      <Mobile>
-        <MobileAvatars />
-      </Mobile>
+      <Desktop>{DesktopAvatars(ROLES)}</Desktop>
+      <Mobile>{MobileAvatars(ROLES)}</Mobile>
       <Manager />
     </Container>
   );

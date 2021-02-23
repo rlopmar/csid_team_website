@@ -58,17 +58,12 @@ const Sections = styled.div`
 `;
 
 const NavItem = styled.div`
+  font-weight: bold;
   position: relative;
   margin-right: 5px;
   color: white;
   text-shadow: 1px 1px black;
   padding: 0 5px;
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Chrome/Safari/Opera */
-  -khtml-user-select: none; /* Konqueror */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version */
 
   &:hover {
     color: white;
@@ -126,7 +121,18 @@ export default function Navbar() {
           </Link>
         </Logo>
         <Sections>
-          {sections.map((section) => (
+          <NavItem>
+            <Link
+              key={'hero-link'}
+              to={'hero'}
+              spy={true}
+              smooth={true}
+              offset={-70}
+            >
+              @ CSID | SAP SE
+            </Link>
+          </NavItem>
+          {/* {sections.map((section) => (
             <Link
               key={section}
               to={section.toLowerCase()}
@@ -136,7 +142,7 @@ export default function Navbar() {
             >
               <NavItem className='s1'>{section}</NavItem>
             </Link>
-          ))}
+          ))} */}
         </Sections>
       </Nav>
     </React.Fragment>

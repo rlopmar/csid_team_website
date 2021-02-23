@@ -2,9 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Gallery from 'react-grid-gallery';
 import { colors } from 'global';
-import IMAGES from './images';
 import { slideshowAnim } from './slideshowAnim';
-import { device } from 'global';
+import getImages, { IGallery } from './images';
 
 const Container = styled.div`
   position: relative;
@@ -12,21 +11,12 @@ const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
-  background-color: #f4f5f4;
   box-sizing: content-box;
   margin-bottom: 20px;
 `;
 
 const SlideWrapper = styled.div`
-  box-shadow: 0 0 50px rgb(0, 0, 0, 0.3), 0 5px 10px rgb(30, 30, 30, 0.5),
-    inset 0 0 20px rgb(0, 0, 0);
-  border-radius: 0;
   width: 100vw;
-
-  @media${device.desktopL} {
-    border-radius: 10px;
-    max-width: 1400px;
-  }
 `;
 
 const SlideShow = styled.div`
@@ -35,11 +25,6 @@ const SlideShow = styled.div`
   flex-direction: row;
   height: 500px;
   overflow: hidden;
-  border-radius: 0;
-
-  @media${device.desktopL} {
-    border-radius: 20px;
-  }
 `;
 
 const Images = styled.div`
@@ -58,7 +43,24 @@ const Title = styled.h2`
   text-align: center;
 `;
 
+function thumbnailStyle() {
+  return {
+    objectFit: 'contain',
+    width: '100%',
+    height: '100%',
+    objectPosition: 'center',
+    backgroundColor: '#F4F5F4',
+    cursor: 'pointer',
+  };
+}
+
 export default function TeamEvents() {
+  const [images, setImages] = React.useState<IGallery>([]);
+
+  React.useEffect(() => {
+    setImages(getImages());
+  }, []);
+
   return (
     <Container>
       <Title>Team events</Title>
@@ -66,10 +68,10 @@ export default function TeamEvents() {
         <SlideShow>
           <Images className='slideshow'>
             <Gallery
-              margin={0}
               maxRows={3}
               enableImageSelection={false}
-              images={IMAGES}
+              images={images}
+              thumbnailStyle={thumbnailStyle}
             />
           </Images>
         </SlideShow>

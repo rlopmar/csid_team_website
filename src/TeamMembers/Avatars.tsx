@@ -7,12 +7,11 @@ import { device, colors } from 'global';
 import AvatarTooltip from './AvatarTooltip';
 
 const AvatarContainer = styled.div`
-  // width: 100px;
-  // position: relative;
-  // display: flex;
-  // justify-content: center;
-
   @media${device.laptop} {
+    width: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
     width: 50%;
   }
 `;

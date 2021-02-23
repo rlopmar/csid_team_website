@@ -6,18 +6,18 @@ export interface Role {
 
 export default [
   {
-    id: 'scrumMasters',
-    name: 'Scrum Masters',
+    id: 'agile',
+    name: 'Agile',
     img: '/Images/Scrum Master.svg',
   },
   {
     id: 'productOwners',
-    name: 'Product Owners',
+    name: 'Product Owners and Business Analyst',
     img: '/Images/Product Owner.svg',
   },
   {
     id: 'developers',
-    name: 'Developers',
+    name: 'Development',
     img: '/Images/Developer.svg',
   },
   {
