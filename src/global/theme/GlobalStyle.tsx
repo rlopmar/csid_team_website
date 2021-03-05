@@ -48,8 +48,7 @@ const GlobalStyle = createGlobalStyle`
 
     ${mobile(fontSize(32.44))}
     ${tablet(fontSize(47.78))}
-    ${desktop(fontSize(61.04))}
-    ${desktopL(fontSize(89.76))}
+    ${desktop(fontSize(50))}
   }
 
   h2 {
@@ -58,8 +57,7 @@ const GlobalStyle = createGlobalStyle`
 
     ${mobile(fontSize(28.83))}
     ${tablet(fontSize(39.81))}
-    ${desktop(fontSize(48.83))}
-    ${desktopL(fontSize(67.34))}
+    ${desktop(fontSize(40))}
   }
   
   h3 {
@@ -68,8 +66,7 @@ const GlobalStyle = createGlobalStyle`
 
     ${mobile(fontSize(25.63))}
     ${tablet(fontSize(33.18))}
-    ${desktop(fontSize(39.06))}
-    ${desktopL(fontSize(50.52))}
+    ${desktop(fontSize(35))}
   }
 
   h4 {
@@ -78,8 +75,7 @@ const GlobalStyle = createGlobalStyle`
 
     ${mobile(fontSize(22.78))}
     ${tablet(fontSize(27.65))}
-    ${desktop(fontSize(31.25))}
-    ${desktopL(fontSize(37.9))}
+    ${desktop(fontSize(31))}
   }
 
   h5 {

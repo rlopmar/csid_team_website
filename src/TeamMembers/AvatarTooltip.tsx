@@ -103,7 +103,7 @@ const ContactButton = styled.button`
   }
 `;
 
-export default function AvatarTooltip(member, role) {
+export default function AvatarTooltip(member) {
   const {
     avatar,
     name,
@@ -112,6 +112,7 @@ export default function AvatarTooltip(member, role) {
     location,
     specializations,
     responsibilities,
+    role,
   } = member;
 
   return (
@@ -123,7 +124,7 @@ export default function AvatarTooltip(member, role) {
         <Title>
           <p style={{ fontWeight: 'bold', marginBottom: 0 }}>{name}</p>
           <p className='s2' style={{ marginTop: '5px' }}>
-            {role.name}
+            {role}
           </p>
         </Title>
       </Header>
@@ -136,17 +137,17 @@ export default function AvatarTooltip(member, role) {
           />
           {location}
         </ContactItem>
-        <ContactItem className='p2'>
+        {/* <ContactItem className='p2'>
           <Icon src='/Icons/email.svg' />
           {email}
         </ContactItem>
         <ContactItem className='p2'>
           <Icon src='/Icons/phone.svg' />
           {phoneNumber}
-        </ContactItem>
+        </ContactItem> */}
       </Contact>
 
-      <Hr />
+      {/* <Hr />
 
       <Specializations>
         <p>Specialized in</p>
@@ -165,7 +166,7 @@ export default function AvatarTooltip(member, role) {
           Want to know more about me?
         </p>
         <ContactButton className='s2'>Contact</ContactButton>
-      </Footer>
+      </Footer> */}
     </Wrapper>
   );
 }

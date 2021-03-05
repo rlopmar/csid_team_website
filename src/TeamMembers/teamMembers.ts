@@ -6,9 +6,14 @@ export interface MembersInfo {
   phoneNumber: string;
   responsabilities: string[];
   specializations: string[];
+  role: string;
 }
 
-export const teamMembers = {
+interface TeamMembers {
+  [key: string]: MembersInfo[];
+}
+
+export const teamMembers: TeamMembers = {
   agile: [
     {
       name: 'Kai Hu',
@@ -16,8 +21,9 @@ export const teamMembers = {
       location: 'Germany',
       email: 'kai.hu@sap.com',
       phoneNumber: '+44 95729435',
-      responsibilities: ['responsibilities'],
+      responsabilities: ['responsabilities'],
       specializations: ['Project Management', 'Soft skills', 'Negotiation'],
+      role: 'Scrum Master',
     },
     {
       name: 'Angel Garcia',
@@ -25,19 +31,31 @@ export const teamMembers = {
       location: 'Germany',
       email: 'angel.garcia@sap.com',
       phoneNumber: '+44 94567397',
-      responsibilities: ['responsibilities'],
+      responsabilities: ['responsabilities'],
       specializations: ['Dragon Slayer', 'Master of Water'],
+      role: 'Agile Master',
     },
   ],
   productOwners: [
+    {
+      name: 'George Revesz',
+      avatar: '/Avatars/George.png',
+      location: 'Heidelberg',
+      email: 'not gonna tell you',
+      phoneNumber: 'not gonna tell you',
+      responsabilities: [],
+      specializations: [],
+      role: 'Product Owner',
+    },
     {
       name: 'Brian Keenan',
       avatar: '/Avatars/Brian-Keenan.png',
       location: 'Barcelona',
       email: 'brian.keenan@sap.com',
       phoneNumber: '+44 94567397',
-      responsibilities: ['responsibilities'],
+      responsabilities: ['responsabilities'],
       specializations: ['Dragon Slayer', 'Water Bender'],
+      role: 'Full Stack Wizard',
     },
 
     {
@@ -46,8 +64,9 @@ export const teamMembers = {
       location: 'Barcelona',
       email: 'carlos.delgado02@will.com',
       phoneNumber: '+34 2394572',
-      responsibilities: ['responsibilities'],
+      responsabilities: ['responsabilities'],
       specializations: ['Big Datanalytics', 'Visionaire'],
+      role: 'Product Owner',
     },
     {
       name: 'Gamze Kaya-Atilgan',
@@ -55,46 +74,9 @@ export const teamMembers = {
       location: 'Ill be back',
       email: 'universal.soldier@ssapito.com',
       phoneNumber: 'phone number',
-      responsibilities: 'responsibilities',
+      responsabilities: ['responsabilities'],
       specializations: ['Destroyer'],
-    },
-  ],
-  developers: [
-    {
-      name: 'El churrascas',
-      avatar: '/Avatars/Rafael-Lopez.png',
-      location: 'BcnCity',
-      email: 'churras_quito@quitoquito.com',
-      phoneNumber: '+34 9423579287',
-      responsibilities: ['responsibilities'],
-      specializations: ['BBQ Master', 'Fastest hand in west'],
-    },
-    {
-      name: 'Noche de Sergelo',
-      avatar: '/Avatars/Alberto-Delgado.jpeg',
-      location: 'Paradise City',
-      email: 'nocheDeSergel@night.com',
-      phoneNumber: '2398457',
-      responsibilities: 'responsibilities',
-      specializations: ['Sergels Night'],
-    },
-    {
-      name: 'Universal Data Citizen',
-      avatar: '/Avatars/Alberto-Delgado.jpeg',
-      location: 'Ill be back',
-      email: 'universal.soldier@ssapito.com',
-      phoneNumber: 'phone number',
-      responsibilities: 'responsibilities',
-      specializations: ['Destroyer'],
-    },
-    {
-      name: 'Cipriano Sanchez',
-      avatar: '/Avatars/Cipriano-Sanchez.png',
-      location: 'Ill be back',
-      email: 'universal.soldier@ssapito.com',
-      phoneNumber: 'phone number',
-      responsibilities: 'responsibilities',
-      specializations: ['Destroyer'],
+      role: 'Product Owner',
     },
     {
       name: 'Maria Angeles Sanchez',
@@ -102,8 +84,41 @@ export const teamMembers = {
       location: 'Ill be back',
       email: 'universal.soldier@ssapito.com',
       phoneNumber: 'phone number',
-      responsibilities: 'responsibilities',
+      responsabilities: ['responsabilities'],
       specializations: ['Destroyer'],
+      role: 'Business Analyst',
+    },
+  ],
+  developers: [
+    {
+      name: 'Rafael Lopez',
+      avatar: '/Avatars/Rafael-Lopez.png',
+      location: 'BcnCity',
+      email: 'churras_quito@quitoquito.com',
+      phoneNumber: '+34 9423579287',
+      responsabilities: ['responsabilities'],
+      specializations: ['BBQ Master', 'Fastest hand in west'],
+      role: 'Full Stack Master Race',
+    },
+    {
+      name: 'Noche de Sergelo',
+      avatar: '/Avatars/Alberto-Delgado.jpeg',
+      location: 'Paradise City',
+      email: 'nocheDeSergel@night.com',
+      phoneNumber: '2398457',
+      responsabilities: ['responsabilities'],
+      specializations: ['Sergels Night'],
+      role: 'Backend Developer',
+    },
+    {
+      name: 'Cipriano Sanchez',
+      avatar: '/Avatars/Cipriano-Sanchez.png',
+      location: 'Ill be back',
+      email: 'universal.soldier@ssapito.com',
+      phoneNumber: 'phone number',
+      responsabilities: ['responsabilities'],
+      specializations: ['Destroyer'],
+      role: 'Backend Developer',
     },
     {
       name: 'Guillermo Lopez',
@@ -111,8 +126,9 @@ export const teamMembers = {
       location: 'Ill be back',
       email: 'universal.soldier@ssapito.com',
       phoneNumber: 'phone number',
-      responsibilities: 'responsibilities',
+      responsabilities: ['responsabilities'],
       specializations: ['Destroyer'],
+      role: 'Data Citizen',
     },
     {
       name: 'Padmapriya Kanniyan',
@@ -120,8 +136,9 @@ export const teamMembers = {
       location: 'Ill be back',
       email: 'universal.soldier@ssapito.com',
       phoneNumber: 'phone number',
-      responsibilities: 'responsibilities',
+      responsabilities: ['responsabilities'],
       specializations: ['Destroyer'],
+      role: 'Cloud Engineer',
     },
     {
       name: 'Sachin Baral Ramesh',
@@ -129,8 +146,9 @@ export const teamMembers = {
       location: 'Ill be back',
       email: 'universal.soldier@ssapito.com',
       phoneNumber: 'phone number',
-      responsibilities: 'responsibilities',
+      responsabilities: ['responsabilities'],
       specializations: ['Destroyer'],
+      role: 'Yellow Sonic',
     },
   ],
   designers: [
@@ -140,8 +158,19 @@ export const teamMembers = {
       location: 'MiddleSAP',
       email: 'wizard@theWhite.com',
       phoneNumber: '238749',
-      responsibilities: 'responsibilities',
+      responsabilities: ['responsabilities'],
       specializations: ['GOD', 'Creates things from nothing'],
+      role: 'Beautify stuff',
+    },
+    {
+      name: 'Lin  Wan',
+      avatar: '/Avatars/Lin.png',
+      location: 'Rot',
+      email: 'Not gonna tell you',
+      phoneNumber: 'none gonna tell ay',
+      responsabilities: [],
+      specializations: [],
+      role: 'UX Designer',
     },
   ],
 };

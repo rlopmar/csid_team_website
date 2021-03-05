@@ -1,6 +1,73 @@
 import styled from 'styled-components';
 import { colors, device } from 'global';
 
+export default function Career() {
+  return (
+    <Container id='career'>
+      <Title>Do you want to join CSID team?</Title>
+      <Wrapper>
+        <ContactInformation>
+          We are offering a one-stop experience from an idea to the Go-Live of a
+          product. As part of the Customer Success Innovation Development Team,
+          you will be working in an international team with contacts to the
+          delivery units of the Customer Success Group and many other SAP
+          cross-units.
+          <br />
+          <br />
+          For cloud solutions, the requirement to ensuring customer success is
+          key.
+          <br />
+          <br />
+          Customers expect ongoing guidance for adopting new configuration and
+          usage of all their cloud solutions considering the constant stream of
+          innovation potential coming from SAP in quarterly releases.
+          <br />
+          <br />
+          To serve our customers effectively and efficiently we are aiming to
+          increase delivery capabilities by intelligent tools.
+          <br />
+          <br />
+          These tools are using all of SAP’s innovations, such as Machine
+          Learning, Fiori, Cloud Application Programming Model (CAP) on Node.js
+          and are built on SAP Cloud Platform or SAP’s internal Infrastructure.
+        </ContactInformation>
+        <Positions>
+          <Li>
+            <Position>
+              <PositionName>
+                Working Student (f/m/d) within a team of Project Managers and
+                Development team
+              </PositionName>
+              <PositionDetails>
+                St. Leon Rot <br />
+                Posted on: 01.03.2021
+              </PositionDetails>
+              <ApplyButton className='s1' disabled>
+                Apply
+              </ApplyButton>
+            </Position>
+          </Li>
+          <Li>
+            <Position>
+              <PositionName>
+                Working Student (f/m/d): team Project Management and Development
+                - Intelligent Enterprise Solutions
+              </PositionName>
+              <PositionDetails>
+                St. Leon Rot <br />
+                Posted on: 01.07.2020
+              </PositionDetails>
+              <ApplyButton className='s1' disabled>
+                Apply
+              </ApplyButton>
+            </Position>
+          </Li>
+        </Positions>
+      </Wrapper>
+    </Container>
+  );
+}
+
 const Container = styled.div`
   padding-bottom: 50px;
 `;
@@ -124,70 +191,3 @@ const ApplyButton = styled.button`
 const Li = styled.li`
   list-style: none;
 `;
-
-export default function Career() {
-  return (
-    <Container id='career'>
-      <Title>Do you want to join CSID team?</Title>
-      <Wrapper>
-        <ContactInformation>
-          We are offering a one-stop experience from an idea to the Go-Live of a
-          product. As part of the Customer Success Innovation Development Team,
-          you will be working in an international team with contacts to the
-          delivery units of the Customer Success Group and many other SAP units,
-          such as T&I, GCO, GBO, ID&A and SAP Global IT.
-          <br />
-          <br />
-          For cloud solutions, the requirement to ensuring customer success is
-          key.
-          <br />
-          <br />
-          Customers expect ongoing guidance for adopting new configuration and
-          usage of all their cloud solutions considering the constant stream of
-          innovation potential coming from SAP in quarterly releases.
-          <br />
-          <br />
-          To serve our customers effectively and efficiently we are aiming to
-          increase delivery capabilities by intelligent tools.
-          <br />
-          <br />
-          These tools are using all of SAP’s innovations, such as Machine
-          Learning, Fiori, Cloud Application Programming Model (CAP) on Node.js
-          and are built on SAP Cloud Platform or SAP’s internal Infrastructure.
-        </ContactInformation>
-        <Positions>
-          <Li>
-            <Position>
-              <PositionName>
-                Working Student (f/m/d) within a team of Project Managers and
-                Development team
-              </PositionName>
-              <PositionDetails>
-                St. Leon Rot <br />
-                Posted on: 01.03.2021
-              </PositionDetails>
-              <ApplyButton className='s1' disabled>
-                Apply
-              </ApplyButton>
-            </Position>
-          </Li>
-          <Li>
-            <Position>
-              <PositionName>
-                Working Student (f/m/d): team Project Management and Development
-                - Intelligent Enterprise Solutions
-              </PositionName>
-              <PositionDetails>
-                St. Leon Rot <br />
-                Posted on: 01.07.2020
-              </PositionDetails>
-              <ApplyButton className='s1' disabled>
-                Apply
-              </ApplyButton>
-            </Position>
-          </Li>
-        </Positions>
-      </Wrapper>
-    </Container>
-  );
-}

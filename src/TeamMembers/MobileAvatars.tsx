@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import {
   CarouselProvider,
@@ -19,9 +20,7 @@ const Slider = styled(slider)`
   width: 100% !important;
 `;
 
-const Slide = styled(slide)`
-  // width: 120px !important;
-`;
+const Slide = styled(slide)``;
 
 const Img = styled.img`
   width: 120px;
@@ -58,7 +57,11 @@ function renderRows(roles: typeof ROLES, width: number) {
 
 function renderRoleMembers(role: Role) {
   return Avatars(role, 'mobile').map((avatar, index) => (
-    <Slide index={index + 1} key={role.name + '-mobile-avatar-' + (index + 1)}>
+    <Slide
+      onClick={() => {}}
+      index={index + 1}
+      key={role.name + '-mobile-avatar-' + (index + 1)}
+    >
       {avatar}
     </Slide>
   ));
@@ -66,5 +69,6 @@ function renderRoleMembers(role: Role) {
 
 export default function MobileAvatars(roles: typeof ROLES) {
   const width = useWindowDimensions().width;
+
   return <Container>{renderRows(roles, width)}</Container>;
 }

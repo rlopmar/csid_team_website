@@ -8,10 +8,10 @@ interface Image {
 
 export type IGallery = Image[];
 
-const verticalImages: number[] = [1, 4, 13, 16, 21, 29, 34];
+// const verticalImages: number[] = [1, 4, 13, 16, 21, 29, 34];
 
 export default function getImages(): IGallery {
-  const images: number[] = Array.from(Array(38).keys());
+  const images: number[] = Array.from(Array(37).keys());
   images.shift();
   const gallery: IGallery = images.map((i: number) => {
     const imagePath = `/Images/TeamEvent/${i}.jpg`;
