@@ -4,32 +4,21 @@ import { colors, device } from 'global';
 export default function Career() {
   return (
     <Container id='career'>
-      <Title>Do you want to join CSID team?</Title>
       <Wrapper>
         <ContactInformation>
-          We are offering a one-stop experience from an idea to the Go-Live of a
-          product. As part of the Customer Success Innovation Development Team,
-          you will be working in an international team with contacts to the
-          delivery units of the Customer Success Group and many other SAP
-          cross-units.
-          <br />
-          <br />
-          For cloud solutions, the requirement to ensuring customer success is
-          key.
-          <br />
-          <br />
-          Customers expect ongoing guidance for adopting new configuration and
-          usage of all their cloud solutions considering the constant stream of
-          innovation potential coming from SAP in quarterly releases.
-          <br />
-          <br />
-          To serve our customers effectively and efficiently we are aiming to
-          increase delivery capabilities by intelligent tools.
-          <br />
-          <br />
-          These tools are using all of SAP’s innovations, such as Machine
-          Learning, Fiori, Cloud Application Programming Model (CAP) on Node.js
-          and are built on SAP Cloud Platform or SAP’s internal Infrastructure.
+          <Title>Do you want to join us?</Title>
+          <p>
+            We are always looking for talented individuals that are the best
+            makers and thinkers. We hire people who are passionate, love to
+            create and develop great tools, and have a collaborative mindset.
+            But most importantly, we want you to enjoy & have fun from what you
+            do and to who you do it with.
+          </p>
+          <p>
+            Couldn't find the job that you're looking for? You can always join
+            the team as a working student or for an internship on the SAP
+            Talentmarket.
+          </p>
         </ContactInformation>
         <Positions>
           <Li>
@@ -69,12 +58,14 @@ export default function Career() {
 }
 
 const Container = styled.div`
+  margin-top: 50px;
   padding-bottom: 50px;
 `;
 
 const Title = styled.h2`
   color: ${colors.primary.doveGray};
   text-align: center;
+  margin-top: 0;
 `;
 
 const Wrapper = styled.div`

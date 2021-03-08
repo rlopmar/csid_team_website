@@ -9,28 +9,26 @@ export default function Hero(): ReactElement {
     <Parallax
       bgImage={'/Images/LandingPage.jpg'}
       style={{
-        marginTop: '-70px',
-        paddingBottom: '70px',
+        marginTop: '-700px',
         zIndex: '-1',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
       }}
     >
       <Wrapper id='hero'>
         <Main>
-          <div>
-            <Slogan>
-              <Highlight>Innovation</Highlight> = Idea + Leader + Team + Plan{' '}
-            </Slogan>
-            <SubSlogan style={{ marginTop: 0 }}>
-              It's not about ideas, it is about{' '}
-              <Highlight>making ideas happen</Highlight>
-            </SubSlogan>
+          <Slogan>
+            <Highlight>Innovation</Highlight> = Idea + Leader + Team + Plan
+          </Slogan>
+          <SubSlogan style={{ marginTop: 0 }}>
+            It's not about ideas, it is about{' '}
+            <Highlight>making ideas happen</Highlight>
+          </SubSlogan>
 
-            <Section>
-              <Subtitle>We are a team of</Subtitle>
-              <Title>Customer Success Innovation Development</Title>
-              <Subtitle>at IES Customer Engagement Solutions in SAP</Subtitle>
-            </Section>
-          </div>
+          <Section>
+            <Title>Customer Success Innovation Development Team</Title>
+            <Subtitle>at IES Customer Engagement Solutions in SAP</Subtitle>
+          </Section>
         </Main>
       </Wrapper>
     </Parallax>
@@ -38,7 +36,7 @@ export default function Hero(): ReactElement {
 }
 
 const Wrapper = styled.div`
-  padding-top: 170px;
+  padding-top: 850px;
   padding-bottom: 50px;
   margin-top: -70px;
   z-index: 2;
