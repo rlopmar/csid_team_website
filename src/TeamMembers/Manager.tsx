@@ -24,12 +24,12 @@ const Title = styled.h2`
 `;
 
 const AvatarWrapper = styled.div`
-  margin-top: 35px;
+  margin-top: 40px;
   display: flex;
   justify-content: center;
 
   @media${device.mobileL} {
-    margin-top: 40px;
+    margin-top: 50px;
   }
 `;
 

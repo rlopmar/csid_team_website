@@ -150,6 +150,16 @@ export const teamMembers: TeamMembers = {
       specializations: ['Destroyer'],
       role: 'Yellow Sonic',
     },
+    {
+      name: 'Vishal Pokarne',
+      avatar: '/Avatars/Vishal.png',
+      location: 'Germany',
+      email: 'vishal.pokarne@sap.com',
+      phoneNumber: 'random phone number',
+      responsabilities: [],
+      specializations: [],
+      role: 'Magician',
+    },
   ],
   designers: [
     {
