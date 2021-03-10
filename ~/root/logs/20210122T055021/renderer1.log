@@ -1,0 +1,22 @@
+[2021-01-22 05:50:22.800] [renderer1] [error] Network Error: Error: Network Error
+    at e.exports (/Applications/Visual Studio Code.app/Contents/Resources/app/node_modules.asar/tas-client-umd/lib/tas-client-umd.js:1:7511)
+    at XMLHttpRequest.p.onerror (/Applications/Visual Studio Code.app/Contents/Resources/app/node_modules.asar/tas-client-umd/lib/tas-client-umd.js:1:6478)
+[2021-01-22 05:50:23.435] [renderer1] [error] net::ERR_CERT_INVALID: Error: net::ERR_CERT_INVALID
+    at SimpleURLLoaderWrapper.<anonymous> (electron/js2c/browser_init.js:105:6395)
+    at SimpleURLLoaderWrapper.emit (events.js:223:5)
+[2021-01-22 05:50:27.636] [renderer1] [error] Agent terminated with exit code: 0 and signal null: A fatal error occurred. The required library libhostfxr.dylib could not be found.
+If this is a self-contained application, that library should exist in [/Users/I339590/.vscode/extensions/ms-vsliveshare.vsliveshare-1.0.3484/dotnet_modules/].
+If this is a framework-dependent application, install the runtime in the global location [/usr/local/share/dotnet] or use the DOTNET_ROOT environment variable to specify the runtime location or register the runtime location in [/etc/dotnet/install_location].
+
+The .NET Core runtime can be found at:- https://aka.ms/dotnet-core-applaunch?missing_runtime=true&arch=x64&rid=osx.10.15-x64: Error: Agent terminated with exit code: 0 and signal null: A fatal error occurred. The required library libhostfxr.dylib could not be found.
+If this is a self-contained application, that library should exist in [/Users/I339590/.vscode/extensions/ms-vsliveshare.vsliveshare-1.0.3484/dotnet_modules/].
+If this is a framework-dependent application, install the runtime in the global location [/usr/local/share/dotnet] or use the DOTNET_ROOT environment variable to specify the runtime location or register the runtime location in [/etc/dotnet/install_location].
+
+The .NET Core runtime can be found at:- https://aka.ms/dotnet-core-applaunch?missing_runtime=true&arch=x64&rid=osx.10.15-x64
+    at ChildProcess.<anonymous> (/Users/I339590/.vscode/extensions/ms-vsliveshare.vsliveshare-1.0.3484/src/abstractions/node/agent.ts:290:32)
+    at ChildProcess.emit (events.js:228:7)
+    at maybeClose (internal/child_process.js:1021:16)
+    at Socket.<anonymous> (internal/child_process.js:430:11)
+    at Socket.emit (events.js:223:5)
+    at Pipe.<anonymous> (net.js:664:12)
+[2021-01-22 05:50:27.637] [renderer1] [error] ENOENT: no such file or directory, unlink '/Users/I339590/.vscode/extensions/ms-vsliveshare.vsliveshare-1.0.3484/cascade.json': Error: ENOENT: no such file or directory, unlink '/Users/I339590/.vscode/extensions/ms-vsliveshare.vsliveshare-1.0.3484/cascade.json'
